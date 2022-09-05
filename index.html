@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Kapow - Ecommerce</title>
+	<script src="https://kit.fontawesome.com/9404c90217.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="shortcut icon" href="imagens/favicon.png" type="image/x-icon" />
+</head>
+<body>
+	<div id="principal">
+		<header id="header">            
+			<div class="logomarca">
+				<img id="header-img" src="..\imagens\Logo.png"></img>
+			</div>		
+			<nav id="nav-bar">
+				<ul>
+					<div id="search-wrap">
+						<form role="search" class= "search-from" method="get" http://127.0.0.1:5500/index.html">
+							<input type="text" class="search-field" placeholder="Procure por um item" value="" name="">                            
+							<i class="fa fa-search" aria-hidden="true"></i>
+							<input type="submit" class="search-submit" value="">
+						</form>
+					</div>                            
+						<li>                       
+							<a class="nav-link" href="#account"><i class="far fa-user"></i>Minha Conta</a>
+						</li>
+						<li>
+							<i class="fas fa-shopping-cart"></i>
+						</li>           
+				</ul>
+			</nav>     
+		</header>
+		
+		<div class="home-slider">
+
+			<div class="sliders">
+
+					<input type="radio" name="radio-btn"	id="slider-btn1">
+					<input type="radio" name="radio-btn"	id="slider-btn2">
+					<input type="radio" name="radio-btn"	id="slider-btn3">
+				
+
+				<div class="slide first">
+					<img src="\imagens\Flash Sale - Banner.png" alt="Compre agora">
+				</div>
+				<div class="slide">
+					<img src="\imagens\Banner-apple.png" alt="Banner Apple">
+				</div>
+				<div class="slide">
+					<img src="\imagens\Banner-cannon.png" alt="Banner Cannon">
+				</div>
+
+				<div class="navigation-auto">
+					<div class="auto-btn1"></div>
+					<div class="auto-btn2"></div>
+					<div class="auto-btn3"></div>
+				</div>
+
+			</div>
+
+			<div class="navigation-manual">
+				<label for="slider-btn1" class="manual-btn"></label>
+				<label for="slider-btn2" class="manual-btn"></label>
+				<label for="slider-btn3" class="manual-btn"></label>
+			</div>
+
+		</div>
+		
+		<script src="script/script.js"></script>		
+
+		<main>
+			<section class="product-content">	
+			</section>
+		</main>
+
+	</div>
+</body>
+</html>
