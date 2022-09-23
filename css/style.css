@@ -131,12 +131,11 @@ i.fas.fa-shopping-cart {
   font-size: 25px;
   color: white;
 }
-
 .home-slider{
   margin: 0 auto;
-  height: 320px;
+  height: 400px;
   width: 1366px;
-  overflow: visible;
+  overflow: hidden;
 }
 
 .sliders {
@@ -194,7 +193,7 @@ i.fas.fa-shopping-cart {
 .navigation-auto{
   position: absolute;
   width: 1366px;
-  margin-top: 360px;
+  margin-top: 280px;
   display: flex;
   justify-content: center;
 }
@@ -205,6 +204,106 @@ i.fas.fa-shopping-cart {
 #slider-btn2:checked ~ .navigation-auto .auto-btn2, 
 #slider-btn3:checked ~ .navigation-auto .auto-btn3{
   background-color: #e78200;
+}
+.services {
+  background-color: #000;
+  display: flex;
+}
+.info-service p {
+  color: #f87f3b;
+  font-weight: bold;
+  text-decoration: none;
+  font-family: 'poppins', Helvetica;
+}
+.services ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin: 0 auto;
+  padding: 17px 0;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+.info-service span {
+  color: #f87f3b;
+  text-decoration: none;
+  font-family: 'poppins', Helvetica;
+}
+.info-service {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 10px;
+}
+.services-inside img {
+  max-height: 33px;
+  margin-top:8px;
+}
+/*Footer*/
+div#footer {
+	width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+.footer-under {
+    background-color: white;
+}
+.footer-under .inside>ul{
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  flex-direction: row;
+  margin: 0;
+}
+.footer-under .inside {
+    color: black;
+    padding:25px 0;
+}
+p.info-footer-under {
+    font-size: 16px;
+    font-weight: bold;    
+}
+.inside .social ul{
+    margin:0;  
+}
+.inside .social li{
+    display: inline-block;
+    margin-right: 8px;
+}
+.inside .social img{
+    display: inline;
+    width: 25px;
+}
+.address p, .security span{
+    font-size: 13px;
+}
+.security p {
+    margin-bottom: 10px;
+}
+li.payment img {
+    width: 170px;
+}
+.inside ul>li {
+    text-align: left;
+}
+.info-footer-under img {
+    display: inline-block;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+p.store-address {
+  font-size: 15px;
+  margin-bottom: 10px;
+  line-height: 20px;
+  text-shadow: 0.8px 0.5px #ccc;
+}
+small.info, .security span {
+  text-shadow: 0.2px 0.4px #cccccc61;
+}
+/*Fim footer*/
+.inside{
+  width: 1280px;
+  margin: 0 auto;
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1129px) {}
