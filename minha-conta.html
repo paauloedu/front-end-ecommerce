@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Conta</title>
+    <script src="https://kit.fontawesome.com/9404c90217.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+	<link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon" />
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poppins" />
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>	
+	<script>
+        $(function(){ 
+                  $("#header").load("home-page.html #header");
+                  $("#footer").load("home-page.html #footer");
+                  $(".footer-under").load("home-page.html .footer-under");
+         });
+   </script>
+</head>
+<body>
+    <div id="principal">
+		<header id="header">
+
+        </header>
+        <main>
+            <section class="product-content">
+				<h1>CADASTRO DE CLIENTES</h1>
+			</section>
+        </main>
+        <footer>
+			<div id="footer">
+            </div>
+            <div class="footer-under">                
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

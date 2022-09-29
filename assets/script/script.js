@@ -3,7 +3,7 @@ document.getElementById("slider-btn1").checked = true;
 
 setInterval( function(){
 	nextImage();
-}, 3000)
+}, 2000)
 
 function nextImage(){
 	count++;

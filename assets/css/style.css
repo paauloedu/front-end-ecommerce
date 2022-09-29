@@ -299,7 +299,8 @@ p.info-footer-under {
     font-weight: bold;    
 }
 .inside .social ul{
-    margin:0;  
+    margin:0;
+    padding: 0;
 }
 .inside .social li{
     display: inline-block;
