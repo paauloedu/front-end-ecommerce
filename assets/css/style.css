@@ -23,7 +23,7 @@ li {
   display: flex;
 }
 
-.logomarca>img {
+.logomarca a img {
   display: flex;
   margin: 10px;
   justify-content: center;
@@ -239,7 +239,7 @@ i.fas.fa-shopping-cart {
   max-height: 33px;
   margin-top:8px;
 }
-/*Produtos*/
+/*PRODUTOS*/
 .product-content{
   height: 400px;
   display: flex;
@@ -247,7 +247,7 @@ i.fas.fa-shopping-cart {
   justify-content: space-around;
 }
 /*FIM PRODUTOS*/
-/*Footer*/
+/*FOOTER*/
 #footer {
   background-color: #000;
   padding: 20px 0;
@@ -336,12 +336,32 @@ p.store-address {
 small.info, .security span {
   text-shadow: 0.2px 0.4px #cccccc61;
 }
-/*Fim footer*/
+/*FIM FOOTER*/
 .inside{
   width: 1280px;
   margin: 0 auto;
 }
-
+/*LOGIN*/
+.login {
+  margin:40px auto;
+  display: inline-block;
+  text-align: center;
+  padding: 20px;
+  border: 1px solid black;
+}
+.login div:nth-child(1) img, 
+.login div:nth-child(1) h2 {
+  display: inline-block;
+}
+.login div:nth-child(1){
+  margin-bottom:10px;
+}
+/*FIM LOGIN*/
+/*CADASTRO*/
+.register-content{
+  margin-top: 82px;
+}
+/*FIM CADASTRO*/
 @media only screen and (min-width: 1024px) and (max-width: 1129px) {}
 
 @media only screen and (min-width: 768px) and (max-width:1023px) {}
