@@ -347,14 +347,68 @@ small.info, .security span {
   display: inline-block;
   text-align: center;
   padding: 20px;
-  border: 1px solid black;
+  border: 1px solid #BBBBBB;
+  border-radius: 5px;
 }
-.login div:nth-child(1) img, 
-.login div:nth-child(1) h2 {
+.login .user-logo, 
+.login h2.form-title {
   display: inline-block;
 }
 .login div:nth-child(1){
   margin-bottom:10px;
+}
+.register-content .inside {
+  text-align: center;
+}
+.form-title {
+  font-size: 30px;
+  text-transform: uppercase;
+  color: #f87f3b;
+  font-family: 'poppins', Helvetica;
+}
+.login .user-logo {
+  max-width: 25px;
+}
+.item-form input {
+  margin-bottom: 20px;
+}
+.item-form input {
+  padding: 10px;
+  width: 250px;
+  border-radius: 6px;
+  border: 2px solid #BBBBBB;
+}
+button#submit {
+  color: #f87f3b;
+  font-family: 'poppins', Helvetica;
+  font-size: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+  width: 250px;
+  padding: 5px;
+  background-color: transparent;
+  border-radius: 6px;
+  border: 2px solid #F87F3B;
+}
+input#login, input#password {
+  font-size: 20px;
+  font-family: 'poppins', Helvetica;
+}
+button#submit:hover {
+  color: white;
+  background-color: #f87f3b;
+  border: 2px solid black;
+}
+.login p {
+  margin-top: 20px;
+  font-family: 'poppins';
+}
+.login p a {
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #f87f3b;
+  font-weight: 700;
+  text-decoration:underline;
 }
 /*FIM LOGIN*/
 /*CADASTRO*/
