@@ -415,6 +415,52 @@ button#submit:hover {
 .register-content{
   margin-top: 82px;
 }
+.register {
+  display: inline-block;
+  margin: 60px 0;
+}
+.register p{
+  margin-bottom: 10px;
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+.register .register-form:nth-child(2) input,
+.register .register-form:nth-child(3) input {
+  width: 450px;
+}
+.register-form input {
+  padding: 10px;
+  width: 210px;
+  border-radius: 6px;
+  border: 2px solid #BBBBBB;
+  margin-bottom: 20px;
+}
+.register-form {
+  position: relative;
+}
+.input {
+  font: inherit;
+  color: #fff;
+  background-color: transparent;
+  outline: 2px solid #fff;
+}
+.input-label {
+  position:absolute;
+  top: 0;
+  left: 0;
+  transform: translate(10px, 10px);
+  transform-origin: left;
+  transition: transform .25s;
+}
+.input:focus+.input-label,
+.input:valid+.input-label {
+  transform: translate(0, -30px) scale(.0);
+}
+.input:is(:focus, :valid){
+  outline-color: #d1c5fc;
+}
 /*FIM CADASTRO*/
 @media only screen and (min-width: 1024px) and (max-width: 1129px) {}
 
