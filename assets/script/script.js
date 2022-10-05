@@ -48,18 +48,18 @@ function nextImage() {
   document.getElementById("slider-btn" + count).checked = true;
 }
 
-// function handleFormSubmit(event) {
-//   event.preventDefault();
+function convertFormToJSON(form) {
+  const array = $(form).serializeArray(); // Encodes the set of form elements as an array of names and values.
+  const json = {};
+  $.each(array, function () {
+    json[this.name] = this.value || "";
+  });
+  return json;
+}
 
-//   const data = new FormData(event.target);
-
-//   const formJSON = Object.fromEntries(data.entries());
-
-//   formJSON.snacks = data.getAll("snacks");
-
-//   const results = document.querySelector(".results pre");
-//   results.innerText = JSON.stringify(formJSON, null, 2);
-// }
-
-// const form = document.querySelector(".contact-form");
-// form.addEventListener("submit", handleFormSubmit);
+$(".login").on("submit", function (e) {
+  e.preventDefault();
+  const form = $(e.target);
+  const json = convertFormToJSON(form);
+  console.log(json);
+});

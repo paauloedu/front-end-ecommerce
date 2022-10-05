@@ -50,6 +50,23 @@
                         <button type="submit" id="submit">Cadastrar</button>
                     </div>
                 </form>
+                <script>
+                    function convertFormToJSON(form) {
+                        const array = $(form).serializeArray();
+                        const json = {};
+                        $.each(array, function () {
+                            json[this.name] = this.value || "";
+                        });
+                        return json;
+                    }
+
+                    $(".register").on("submit", function (e) {
+                        e.preventDefault();
+                        const form = $(e.target);
+                        const json = convertFormToJSON(form);
+                        console.log(json);
+                    });
+                </script>
             </div>
         </div>
         <footer>

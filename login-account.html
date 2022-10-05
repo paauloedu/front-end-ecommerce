@@ -16,7 +16,7 @@
                   $("#header").load("home-page.html #header");
                   $("#footer").load("home-page.html #footer");
                   $(".footer-under").load("home-page.html .footer-under");
-         });
+         });        
    </script>
 </head>
 <body>
@@ -24,7 +24,7 @@
 		<header id="header"></header>        
         <div class="register-content">
             <div class="inside">                
-                <form class="login" method="post">
+                <form class="login">
                     <div>
                         <img class="user-logo"src="assets/img/user.png" alt="Usuário">
                         <h2 class="form-title">Login</h2>
@@ -42,6 +42,23 @@
                     </div>
                     <p>Novo por aqui? <a href="register-account.html">Crie uma conta</a></p>
                 </form>
+                <script>
+                    function convertFormToJSON(form) {
+                        const array = $(form).serializeArray();
+                        const json = {};
+                        $.each(array, function () {
+                            json[this.name] = this.value || "";
+                        });
+                        return json;
+                    }
+
+                    $(".login").on("submit", function (e) {
+                        e.preventDefault();
+                        const form = $(e.target);
+                        const json = convertFormToJSON(form);
+                        console.log(json);
+                    });
+                </script>
             </div>
         </div>
         <footer>
