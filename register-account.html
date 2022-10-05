@@ -9,43 +9,14 @@
     <link rel="stylesheet" href="assets/css/style.css">
 	<link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon" />
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poppins" />
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>	
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="assets/script/script.js"></script>
 	<script>
         $(function(){ 
                   $("#header").load("home-page.html #header");
                   $("#footer").load("home-page.html #footer");
                   $(".footer-under").load("home-page.html .footer-under");
          });
-         // This code empowers all input tags having a placeholder and data-slots attribute
-        document.addEventListener('DOMContentLoaded', () => {
-            for (const el of document.querySelectorAll("[placeholder][data-slots]")) {
-                const pattern = el.getAttribute("placeholder"),
-                    slots = new Set(el.dataset.slots || "_"),
-                    prev = (j => Array.from(pattern, (c,i) => slots.has(c)? j=i+1: j))(0),
-                    first = [...pattern].findIndex(c => slots.has(c)),
-                    accept = new RegExp(el.dataset.accept || "\\d", "g"),
-                    clean = input => {
-                        input = input.match(accept) || [];
-                        return Array.from(pattern, c =>
-                            input[0] === c || slots.has(c) ? input.shift() || c : c
-                        );
-                    },
-                    format = () => {
-                        const [i, j] = [el.selectionStart, el.selectionEnd].map(i => {
-                            i = clean(el.value.slice(0, i)).findIndex(c => slots.has(c));
-                            return i<0? prev[prev.length-1]: back? prev[i-1] || first: i;
-                        });
-                        el.value = clean(el.value).join``;
-                        el.setSelectionRange(i, j);
-                        back = false;
-                    };
-                let back = false;
-                el.addEventListener("keydown", (e) => back = e.key === "Backspace");
-                el.addEventListener("input", format);
-                el.addEventListener("focus", format);
-                el.addEventListener("blur", () => el.value === pattern && (el.value=""));
-            }
-        });
    </script>
 </head>
 <body>
@@ -53,24 +24,32 @@
 		<header id="header"></header>
         <div class="register-content">
             <div class="inside">
-                <div class="register">
+                <form class="register" method="post" action="home-page.html">
                     <p class="form-title">Criar conta</p>
                     <div class="register-form">
-                        <input class="input" id="name" type="text" name="name" placeholder="Algum Nome dos Santos" required>
+                        <input class="input" id="name" type="text" name="name" required="required">
                         <label for="name" class="input-label">Nome</label>
                     </div>
                     <div class="register-form">
-                        <input class="input" id="email" type="email" name="email" placeholder="E-mail" required>
+                        <input class="input" id="email" type="email" name="email" required="required">
+                        <label for="email" class="input-label">E-mail</label>
                     </div>
                     <div class="register-form flex">                        
-                        <input class="input" id="pwd" type="password" name="password" placeholder="Senha" required>
+                        <input class="input" id="pwd" type="password" name="password" required>
+                        <label for="password" class="input-label">Senha</label>
                         <input class="input" id="cpf" type="text" name="cpf" placeholder="___.___.___-__" data-slots="_" data-accept="[\dA-H]" required>
+                        <label for="cpf" class="input-label">CPF</label>
                     </div>
                     <div class="register-form flex">
-                        <input class="input" id="data" type="text" name="data" data-slots="_" placeholder="__/__/____" required>
-                        <input class="input" id="cellphone" type="tel" name="phone" placeholder="(__) _____-____" data-slots="_" data-accept="[\dA-H]" required>
+                        <input class="input" id="data" type="text" name="data" data-slots="_" onfocus="this.placeholder = ''" placeholder="__/__/____" required>
+                        <label for="data" class="input-label">Data de Nascimento</label>
+                        <input class="input" id="cellphone" type="tel" name="phone" onfocus="this.placeholder = ''" placeholder="(__) _____-____" data-slots="_" data-accept="[\dA-H]" required>
+                        <label for="tel" class="input-label">Telefone</label>
                     </div>
-                </div>
+                    <div class="item-form flex">
+                        <button type="submit" id="submit">Cadastrar</button>
+                    </div>
+                </form>
             </div>
         </div>
         <footer>

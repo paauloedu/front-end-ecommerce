@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="assets/css/style.css">
 	<link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon" />
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poppins" />
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>	
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    
 	<script>
         $(function(){ 
                   $("#header").load("home-page.html #header");
@@ -23,28 +24,31 @@
 		<header id="header"></header>        
         <div class="register-content">
             <div class="inside">                
-                <div class="login">
+                <form class="login" method="post">
                     <div>
                         <img class="user-logo"src="assets/img/user.png" alt="Usuário">
                         <h2 class="form-title">Login</h2>
                     </div>
                     <div class="item-form">                        
-                        <input id="login" type="text" name="cpf" placeholder="CPF" required>
+                        <input id="login" class="input" type="text" name="cpf" placeholder="___.___.___-__" data-slots="_" data-accept="[\dA-H]" required>
+                        <label for="cpf" class="input-label">CPF</label>
                     </div>
                     <div class="item-form">                        
-                        <input id="password" type="password" name="password" placeholder="Senha" required>
+                        <input id="password" class="input" type="password" name="password" required>
+                        <label for="password" class="input-label">Senha</label>
                     </div>
                     <div class="item-form">
                         <button type="submit" id="submit">Entrar</button>
                     </div>
                     <p>Novo por aqui? <a href="register-account.html">Crie uma conta</a></p>
-                </div>
+                </form>
             </div>
-        </div>    
+        </div>
         <footer>
 			<div id="footer"></div>
             <div class="footer-under"></div>
         </footer>
     </div>
+    <script src="assets/script/script.js"></script>
 </body>
 </html>

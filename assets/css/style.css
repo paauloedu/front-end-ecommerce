@@ -3,11 +3,9 @@
   margin: 0;
   box-sizing: border-box;
 }
-
 li {
   list-style: none;
 }
-
 #header {
   position: fixed;
   top: 0;
@@ -18,46 +16,38 @@ li {
   background: #000;
   width: 100%;
 }
-
-#nav-bar>ul {
+#nav-bar > ul {
   display: flex;
 }
-
 .logomarca a img {
   display: flex;
   margin: 10px;
   justify-content: center;
 }
-
-#nav-bar>ul {
+#nav-bar > ul {
   width: 49vw;
   justify-content: space-around;
   flex-direction: row;
   align-content: center;
 }
-
 a.nav-link {
   color: #fff;
   font-size: 20px;
   font-weight: bold;
   text-decoration: none;
 }
-
 a.nav-link:hover {
   color: #e78200;
 }
-
 #nav-bar ul:nth-child(1) {
   padding: 0;
 }
-
 .search-form .search-field {
   border: none;
   border-radius: 7px;
   width: 100%;
   background-color: #f4f5f5;
 }
-
 /*Icon pesquisa*/
 i.fa.fa-search {
   color: white;
@@ -73,17 +63,14 @@ i.fa.fa-search {
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
-
 #search-wrap .search-form .fa-search {
   z-index: 2;
   right: 24px;
   cursor: pointer;
 }
-
 #search-wrap {
   width: 400px;
 }
-
 .search-field {
   position: absolute;
   width: 340px;
@@ -94,24 +81,22 @@ i.fa.fa-search {
   height: 40px;
   border: none;
 }
-
-textarea:focus, input:focus, select:focus {
+textarea:focus,
+input:focus,
+select:focus {
   box-shadow: 0 0 0 0;
   border: 0 none;
   outline: 0;
-} 
-
+}
 .search-form {
   width: 100%;
 }
-
 input.search-submit {
   float: right;
   width: 40px;
   height: 40px;
   border-radius: 10px;
 }
-
 form.search-from input[type="submit"] {
   width: 50px;
   position: absolute;
@@ -120,24 +105,21 @@ form.search-from input[type="submit"] {
   border: none;
   background: transparent;
 }
-
 i.far.fa-user {
   font-size: 25px;
   color: white;
   margin-right: 5px;
 }
-
 i.fas.fa-shopping-cart {
   font-size: 25px;
   color: white;
 }
-.home-slider{
+.home-slider {
   margin: 0 auto;
   height: 400px;
   width: 1366px;
   overflow: hidden;
 }
-
 .sliders {
   height: 320px;
   width: 500%;
@@ -154,55 +136,55 @@ i.fas.fa-shopping-cart {
 .slide img {
   width: 1366px;
 }
-.navigation-manual{
+.navigation-manual {
   position: absolute;
   width: 1366px;
   margin-top: -40px;
   display: flex;
   justify-content: center;
 }
-.manual-btn{
+.manual-btn {
   border: 2px solid #fff;
   padding: 5px;
   border-radius: 10px;
   cursor: pointer;
   transition: 1s;
 }
-.manual-btn:not(:last-child){
+.manual-btn:not(:last-child) {
   margin-right: 40px;
 }
-.manual-btn:hover{
+.manual-btn:hover {
   background-color: #fff;
 }
-#slider-btn1:checked ~ .first{
+#slider-btn1:checked ~ .first {
   margin-left: 0;
 }
-#slider-btn2:checked ~ .first{
+#slider-btn2:checked ~ .first {
   margin-left: -25%;
 }
-#slider-btn3:checked ~ .first{
+#slider-btn3:checked ~ .first {
   margin-left: -50%;
 }
-.navigation-auto div{
+.navigation-auto div {
   border: 2px solid #e78200;
   padding: 5px;
   border-radius: 10px;
   cursor: pointer;
   transition: 1s;
 }
-.navigation-auto{
+.navigation-auto {
   position: absolute;
   width: 1366px;
   margin-top: 280px;
   display: flex;
   justify-content: center;
 }
-.navigation-auto div:not(:last-child){
+.navigation-auto div:not(:last-child) {
   margin-right: 40px;
 }
-#slider-btn1:checked ~ .navigation-auto .auto-btn1, 
-#slider-btn2:checked ~ .navigation-auto .auto-btn2, 
-#slider-btn3:checked ~ .navigation-auto .auto-btn3{
+#slider-btn1:checked ~ .navigation-auto .auto-btn1,
+#slider-btn2:checked ~ .navigation-auto .auto-btn2,
+#slider-btn3:checked ~ .navigation-auto .auto-btn3 {
   background-color: #e78200;
 }
 .services {
@@ -213,7 +195,7 @@ i.fas.fa-shopping-cart {
   color: #f87f3b;
   font-weight: bold;
   text-decoration: none;
-  font-family: 'poppins', Helvetica;
+  font-family: "poppins", Helvetica;
 }
 .services ul {
   display: flex;
@@ -228,7 +210,7 @@ i.fas.fa-shopping-cart {
 .info-service span {
   color: #f87f3b;
   text-decoration: none;
-  font-family: 'poppins', Helvetica;
+  font-family: "poppins", Helvetica;
 }
 .info-service {
   display: inline-block;
@@ -237,10 +219,10 @@ i.fas.fa-shopping-cart {
 }
 .services-inside img {
   max-height: 33px;
-  margin-top:8px;
+  margin-top: 8px;
 }
 /*PRODUTOS*/
-.product-content{
+.product-content {
   height: 400px;
   display: flex;
   align-items: center;
@@ -254,13 +236,13 @@ i.fas.fa-shopping-cart {
   width: 100%;
 }
 #footer ul {
-  display:flex;
+  display: flex;
   align-content: center;
   justify-content: space-between;
   padding: 0;
 }
 p.topics {
-  color:#F87F3B;
+  color: #f87f3b;
   font-size: 15px;
   font-weight: bold;
 }
@@ -278,11 +260,10 @@ a.infos {
 .powered .inside {
   text-align: center;
 }
-
 .footer-under {
   background-color: white;
 }
-.footer-under .inside>ul{
+.footer-under .inside > ul {
   display: flex;
   justify-content: space-between;
   list-style-type: none;
@@ -291,41 +272,42 @@ a.infos {
   padding: 0;
 }
 .footer-under .inside {
-    color: black;
-    padding:25px 0;
+  color: black;
+  padding: 25px 0;
 }
 p.info-footer-under {
-    font-size: 16px;
-    font-weight: bold;    
+  font-size: 16px;
+  font-weight: bold;
 }
-.inside .social ul{
-    margin:0;
-    padding: 0;
+.inside .social ul {
+  margin: 0;
+  padding: 0;
 }
-.inside .social li{
-    display: inline-block;
-    margin-right: 8px;
+.inside .social li {
+  display: inline-block;
+  margin-right: 8px;
 }
-.inside .social img{
-    display: inline;
-    width: 25px;
+.inside .social img {
+  display: inline;
+  width: 25px;
 }
-.address p, .security span{
-    font-size: 13px;
+.address p,
+.security span {
+  font-size: 13px;
 }
 .security p {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 li.payment img {
-    width: 170px;
+  width: 170px;
 }
-.inside ul>li {
-    text-align: left;
+.inside ul > li {
+  text-align: left;
 }
 .info-footer-under img {
-    display: inline-block;
-    margin-right: 8px;
-    vertical-align: middle;
+  display: inline-block;
+  margin-right: 8px;
+  vertical-align: middle;
 }
 p.store-address {
   font-size: 15px;
@@ -333,29 +315,30 @@ p.store-address {
   line-height: 20px;
   text-shadow: 0.8px 0.5px #ccc;
 }
-small.info, .security span {
+small.info,
+.security span {
   text-shadow: 0.2px 0.4px #cccccc61;
 }
 /*FIM FOOTER*/
-.inside{
+.inside {
   width: 1280px;
   margin: 0 auto;
 }
 /*LOGIN*/
 .login {
-  margin:40px auto;
+  margin: 40px auto;
   display: inline-block;
   text-align: center;
   padding: 20px;
-  border: 1px solid #BBBBBB;
+  border: 1px solid #bbbbbb;
   border-radius: 5px;
 }
-.login .user-logo, 
+.login .user-logo,
 .login h2.form-title {
   display: inline-block;
 }
-.login div:nth-child(1){
-  margin-bottom:10px;
+.login div:nth-child(1) {
+  margin-bottom: 10px;
 }
 .register-content .inside {
   text-align: center;
@@ -364,23 +347,31 @@ small.info, .security span {
   font-size: 30px;
   text-transform: uppercase;
   color: #f87f3b;
-  font-family: 'poppins', Helvetica;
+  font-family: "poppins", Helvetica;
 }
 .login .user-logo {
   max-width: 25px;
 }
-.item-form input {
-  margin-bottom: 20px;
+.item-form {
+  position: relative;
+  width: 250px;
+  margin: 0 auto;
 }
 .item-form input {
+  margin-bottom: 20px;
   padding: 10px;
   width: 250px;
   border-radius: 6px;
-  border: 2px solid #BBBBBB;
+  border: 2px solid #bbbbbb;
+}
+.item-form label {
+  padding-left: 20px;
+  padding-top: 18px;
+  font-size: 18px;
 }
 button#submit {
   color: #f87f3b;
-  font-family: 'poppins', Helvetica;
+  font-family: "poppins", Helvetica;
   font-size: 25px;
   font-weight: bold;
   text-transform: uppercase;
@@ -388,11 +379,12 @@ button#submit {
   padding: 5px;
   background-color: transparent;
   border-radius: 6px;
-  border: 2px solid #F87F3B;
+  border: 2px solid #f87f3b;
 }
-input#login, input#password {
+input#login,
+input#password {
   font-size: 20px;
-  font-family: 'poppins', Helvetica;
+  font-family: "poppins", Helvetica;
 }
 button#submit:hover {
   color: white;
@@ -401,25 +393,28 @@ button#submit:hover {
 }
 .login p {
   margin-top: 20px;
-  font-family: 'poppins';
+  font-family: "poppins";
 }
 .login p a {
   font-size: 1rem;
   text-transform: uppercase;
   color: #f87f3b;
   font-weight: 700;
-  text-decoration:underline;
+  text-decoration: underline;
 }
 /*FIM LOGIN*/
 /*CADASTRO*/
-.register-content{
+.register-content {
   margin-top: 82px;
 }
 .register {
   display: inline-block;
   margin: 60px 0;
+  padding: 20px;
+  border: 1px solid #bbbbbb;
+  border-radius: 5px;
 }
-.register p{
+.register p {
   margin-bottom: 10px;
 }
 .flex {
@@ -434,7 +429,7 @@ button#submit:hover {
   padding: 10px;
   width: 210px;
   border-radius: 6px;
-  border: 2px solid #BBBBBB;
+  border: 2px solid #bbbbbb;
   margin-bottom: 20px;
 }
 .register-form {
@@ -442,30 +437,47 @@ button#submit:hover {
 }
 .input {
   font: inherit;
-  color: #fff;
-  background-color: transparent;
-  outline: 2px solid #fff;
+  outline: none;
+  padding: 10px;
 }
 .input-label {
-  position:absolute;
-  top: 0;
+  position: absolute;
+  padding: 10px;
   left: 0;
-  transform: translate(10px, 10px);
-  transform-origin: left;
-  transition: transform .25s;
+  pointer-events: none;
+  color: #bbbbbb;
+  transition: 0.5s;
 }
-.input:focus+.input-label,
-.input:valid+.input-label {
-  transform: translate(0, -30px) scale(.0);
+.input:valid + .input-label,
+.input:focus + .input-label {
+  color: #f87f3b;
+  transform: translateX(10px) translateY(-7px);
+  font-size: 15px;
+  padding: 0 5px;
+  background: #fff;
 }
-.input:is(:focus, :valid){
-  outline-color: #d1c5fc;
+.input:valid,
+.input:focus {
+  border: 2px solid #f87f3b;
+}
+.register-form label:nth-child(4) {
+  margin-left: 240px;
+}
+.input::placeholder {
+  opacity: 0;
+}
+.item-form button#submit {
+  padding: 0;
 }
 /*FIM CADASTRO*/
-@media only screen and (min-width: 1024px) and (max-width: 1129px) {}
+@media only screen and (min-width: 1024px) and (max-width: 1129px) {
+}
 
-@media only screen and (min-width: 768px) and (max-width:1023px) {}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+}
 
-@media only screen and (max-width: 767px) {}
+@media only screen and (max-width: 767px) {
+}
 
-@media only screen and (max-width: 479px) {}
+@media only screen and (max-width: 479px) {
+}
