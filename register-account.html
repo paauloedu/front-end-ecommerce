@@ -13,11 +13,13 @@
     <script src="assets/script/script.js"></script>
 	<script>
         $(function(){ 
-                  $("#header").load("home-page.html #header");
-                  $("#footer").load("home-page.html #footer");
-                  $(".footer-under").load("home-page.html .footer-under");
-         });
+            $("#header").load("home-page.html #header");
+            $("#footer").load("home-page.html #footer");
+            $(".footer-under").load("home-page.html .footer-under");
+        });
    </script>
+   <script src="https://unpkg.com/axios@0.27.2/dist/axios.min.js"></script> <!-- SOLUÇÃO TEMPORÁRIA -->
+   <script src="assets/script/consumer-api.js"></script>
 </head>
 <body>
     <div id="principal">
@@ -47,26 +49,10 @@
                         <label for="tel" class="input-label">Telefone</label>
                     </div>
                     <div class="item-form flex">
-                        <button type="submit" id="submit">Cadastrar</button>
+                        <button type="submit" onclick="addUser()" id="submit">Cadastrar</button>
                     </div>
                 </form>
-                <script>
-                    function convertFormToJSON(form) {
-                        const array = $(form).serializeArray();
-                        const json = {};
-                        $.each(array, function () {
-                            json[this.name] = this.value || "";
-                        });
-                        return json;
-                    }
-
-                    $(".register").on("submit", function (e) {
-                        e.preventDefault();
-                        const form = $(e.target);
-                        const json = convertFormToJSON(form);
-                        console.log(json);
-                    });
-                </script>
+                <script src="assets/script/json-convert.js"></script>
             </div>
         </div>
         <footer>

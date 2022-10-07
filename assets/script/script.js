@@ -47,19 +47,3 @@ function nextImage() {
   }
   document.getElementById("slider-btn" + count).checked = true;
 }
-
-function convertFormToJSON(form) {
-  const array = $(form).serializeArray(); // Encodes the set of form elements as an array of names and values.
-  const json = {};
-  $.each(array, function () {
-    json[this.name] = this.value || "";
-  });
-  return json;
-}
-
-$(".login").on("submit", function (e) {
-  e.preventDefault();
-  const form = $(e.target);
-  const json = convertFormToJSON(form);
-  console.log(json);
-});
