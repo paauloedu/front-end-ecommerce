@@ -3,6 +3,16 @@
   margin: 0;
   box-sizing: border-box;
 }
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 30px white inset;
+}
 li {
   list-style: none;
 }
@@ -411,25 +421,25 @@ button#submit:hover {
   display: inline-block;
   margin: 60px 0;
   padding: 20px;
-  border: 1px solid #bbbbbb;
+  border: 1px solid rgb(127, 133, 141);
   border-radius: 5px;
 }
-.register p {
+.register p,
+.register h2 {
   margin-bottom: 10px;
 }
 .flex {
   display: flex;
   justify-content: space-between;
 }
-.register .register-form:nth-child(2) input,
-.register .register-form:nth-child(3) input {
+.register .register-form:nth-child(4) input {
   width: 450px;
 }
 .register-form input {
   padding: 10px;
   width: 210px;
   border-radius: 6px;
-  border: 2px solid #bbbbbb;
+  border: 1px solid rgb(127, 133, 141);
   margin-bottom: 20px;
 }
 .register-form {
@@ -445,7 +455,7 @@ button#submit:hover {
   padding: 10px;
   left: 0;
   pointer-events: none;
-  color: #bbbbbb;
+  color: rgb(127, 133, 141);
   transition: 0.5s;
 }
 .input:valid + .input-label,
@@ -458,7 +468,7 @@ button#submit:hover {
 }
 .input:valid,
 .input:focus {
-  border: 2px solid #f87f3b;
+  border: 1px solid #f87f3b;
 }
 .register-form label:nth-child(4) {
   margin-left: 240px;
@@ -468,6 +478,20 @@ button#submit:hover {
 }
 .item-form button#submit {
   padding: 0;
+}
+#number {
+  width: 90px;
+}
+#street {
+  width: 330px;
+}
+#label-number {
+  margin-left: 360px;
+}
+.register p.form-title {
+  font-size: 25px;
+  color: black;
+  text-transform: none;
 }
 /*FIM CADASTRO*/
 @media only screen and (min-width: 1024px) and (max-width: 1129px) {
