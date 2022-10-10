@@ -410,14 +410,40 @@ button#submit:hover {
   margin-top: 20px;
   font-family: "poppins";
 }
-.login p a {
+.login .info {
   font-size: 1rem;
   text-transform: uppercase;
   color: #f87f3b;
   font-weight: 700;
   text-decoration: underline;
 }
+.login a:nth-child(5) {
+  margin-top: 5px;
+  display: block;
+  text-align: end;
+  color: #4d4d4d;
+}
 /*FIM LOGIN*/
+/*Forget*/
+.login-forget {
+  margin: 40px auto;
+  display: inline-block;
+  text-align: center;
+  padding: 20px;
+  border: 1px solid rgb(127, 133, 141);
+  border-radius: 5px;
+}
+/*FIM FORGET*/
+/**/
+.new-password{
+  margin: 40px auto;
+  display: inline-block;
+  text-align: center;
+  padding: 20px;
+  border: 1px solid rgb(127, 133, 141);
+  border-radius: 5px;
+}
+/**/
 /*CADASTRO*/
 .register-content {
   margin-top: 82px;

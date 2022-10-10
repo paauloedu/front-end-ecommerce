@@ -22,3 +22,19 @@ $(".register").on("submit", function (e) {
   addUser(json);
   console.log(json);
 });
+
+$(".login-forget").on("submit", function (e) {
+  e.preventDefault();
+  const form = $(e.target);
+  const json = convertFormToJSON(form);
+  forgetUser(json);
+  console.log(json);
+});
+
+$(".new-password").on("submit", function (e) {
+  e.preventDefault();
+  const form = $(e.target);
+  const json = convertFormToJSON(form);
+  newPassword(json);
+  console.log(json);
+});

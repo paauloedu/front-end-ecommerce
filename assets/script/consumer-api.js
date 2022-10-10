@@ -46,3 +46,27 @@ function loginUser(json) {
       document.getElementById("password").value = "";
     });
 }
+
+function forgetUser(json) {
+  axios
+    .post(`${url}/users/forget`, json)
+    .then((response) => {
+      alert("Email encaminhado para: " + json.email);
+      window.location.href = "http://127.0.0.1:5500/login-account.html";
+    })
+    .catch((error) => console.log(error));
+}
+
+function newPassword(json) {
+  /* Entender como enviar o campo Token */
+  axios
+    .post(`${url}/users/reset`, json)
+    .then((response) => {
+      alert("Senha alterada com sucesso.");
+      windows.location.href = "http://127.0.0.1:5500/login-account.html";
+    })
+    .cath((error) => {d
+      alert("Envio errado.");
+      console.log(error);
+    });
+}
