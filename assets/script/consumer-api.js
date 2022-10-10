@@ -21,7 +21,28 @@ function addUser(json) {
   axios
     .post(`${url}/users/signup`, json)
     .then((response) => {
-      alert(JSON.stringify(response.data));
+      alert("Usuário cadastrado.");
+      window.location.href = "http://127.0.0.1:5500/login-account.html";
     })
-    .catch((error) => console.log(error));
+    .catch((error) => {
+      alert("Não foi possível cadastrar o usuário.");
+      var allInputs = document.querySelectorAll("input");
+      allInputs.forEach((element) => {
+        element.value = "";
+      });
+    });
+}
+
+function loginUser(json) {
+  axios
+    .post(`${url}/users/login`, json)
+    .then((response) => {
+      alert("Usuário logado! Redirecionando para Home...");
+      window.location.href = "http://127.0.0.1:5500/home-page.html";
+    })
+    .catch((error) => {
+      alert("Usuário ou Senha inválido. Tente novamente.");
+      document.getElementById("login").value = "";
+      document.getElementById("password").value = "";
+    });
 }

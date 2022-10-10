@@ -13,6 +13,11 @@ select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0 30px white inset;
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 li {
   list-style: none;
 }
@@ -340,7 +345,7 @@ small.info,
   display: inline-block;
   text-align: center;
   padding: 20px;
-  border: 1px solid #bbbbbb;
+  border: 1px solid rgb(127, 133, 141);
   border-radius: 5px;
 }
 .login .user-logo,
@@ -364,15 +369,15 @@ small.info,
 }
 .item-form {
   position: relative;
-  width: 250px;
+  width: 350px;
   margin: 0 auto;
 }
 .item-form input {
   margin-bottom: 20px;
   padding: 10px;
-  width: 250px;
+  width: inherit;
   border-radius: 6px;
-  border: 2px solid #bbbbbb;
+  border: 1px solid #bbbbbb;
 }
 .item-form label {
   padding-left: 20px;
@@ -385,11 +390,11 @@ button#submit {
   font-size: 25px;
   font-weight: bold;
   text-transform: uppercase;
-  width: 250px;
+  width: inherit;
   padding: 5px;
   background-color: transparent;
   border-radius: 6px;
-  border: 2px solid #f87f3b;
+  border: 1px solid #f87f3b;
 }
 input#login,
 input#password {
@@ -399,7 +404,7 @@ input#password {
 button#submit:hover {
   color: white;
   background-color: #f87f3b;
-  border: 2px solid black;
+  border: 1px solid black;
 }
 .login p {
   margin-top: 20px;

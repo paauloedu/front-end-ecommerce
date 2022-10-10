@@ -11,6 +11,7 @@ $(".login").on("submit", function (e) {
   e.preventDefault();
   const form = $(e.target);
   const json = convertFormToJSON(form);
+  loginUser(json)
   console.log(json);
 });
 
@@ -18,5 +19,6 @@ $(".register").on("submit", function (e) {
   e.preventDefault();
   const form = $(e.target);
   const json = convertFormToJSON(form);
+  addUser(json);
   console.log(json);
 });
