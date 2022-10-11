@@ -2,9 +2,19 @@ function convertFormToJSON(form) {
   const array = $(form).serializeArray();
   const json = {};
   $.each(array, function () {
-    json[this.name] = this.value || "";
+    if (this.name == "birthdate") {
+      date = formataStringData(this.value);
+      json[this.name] = date || "";
+    } else json[this.name] = this.value || "";
   });
   return json;
+}
+
+function formataStringData(data) {
+  var dia = data.split("/")[0];
+  var mes = data.split("/")[1];
+  var ano = data.split("/")[2];
+  return ano + "-" + ("0" + mes).slice(-2) + "-" + ("0" + dia).slice(-2);
 }
 
 $(".login").on("submit", function (e) {
