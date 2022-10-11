@@ -11,7 +11,7 @@ $(".login").on("submit", function (e) {
   e.preventDefault();
   const form = $(e.target);
   const json = convertFormToJSON(form);
-  loginUser(json)
+  loginUser(json);
   console.log(json);
 });
 
@@ -35,6 +35,6 @@ $(".new-password").on("submit", function (e) {
   e.preventDefault();
   const form = $(e.target);
   const json = convertFormToJSON(form);
-  newPassword(json);
+  newPasswordUser(json);
   console.log(json);
 });

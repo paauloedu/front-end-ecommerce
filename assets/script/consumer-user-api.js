@@ -1,10 +1,10 @@
-const url = "https://api-eng-soft-2.herokuapp.com/v1";
+const url = "https://api-eng-soft-2.herokuapp.com/v1/users";
 const token =
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM2NzQzNjdmLTgxMDYtNGVkMy05YmVjLWVkY2Q3MjY4YmViMyIsImlhdCI6MTY2NTMyODQ5NCwiZXhwIjoxNjY1NzYwNDk0fQ.hv66-k7NJ50QU7z73gTJUGrx7yhd28zvkD3u2Dle16Y";
 
 function getUser() {
   axios
-    .get(`${url}/users`, {
+    .get(`${url}`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -19,7 +19,7 @@ function getUser() {
 
 function addUser(json) {
   axios
-    .post(`${url}/users/signup`, json)
+    .post(`${url}/signup`, json)
     .then((response) => {
       alert("Usuário cadastrado.");
       window.location.href = "http://127.0.0.1:5500/login-account.html";
@@ -35,21 +35,20 @@ function addUser(json) {
 
 function loginUser(json) {
   axios
-    .post(`${url}/users/login`, json)
+    .post(`${url}/login`, json)
     .then((response) => {
       alert("Usuário logado! Redirecionando para Home...");
       window.location.href = "http://127.0.0.1:5500/home-page.html";
     })
     .catch((error) => {
       alert("Usuário ou Senha inválido. Tente novamente.");
-      document.getElementById("login").value = "";
       document.getElementById("password").value = "";
     });
 }
 
 function forgetUser(json) {
   axios
-    .post(`${url}/users/forget`, json)
+    .post(`${url}/forget`, json)
     .then((response) => {
       alert("Email encaminhado para: " + json.email);
       window.location.href = "http://127.0.0.1:5500/login-account.html";
@@ -57,16 +56,16 @@ function forgetUser(json) {
     .catch((error) => console.log(error));
 }
 
-function newPassword(json) {
+function newPasswordUser(json) {
   /* Entender como enviar o campo Token */
   axios
-    .post(`${url}/users/reset`, json)
+    .post(`${url}/reset`, json)
     .then((response) => {
       alert("Senha alterada com sucesso.");
       windows.location.href = "http://127.0.0.1:5500/login-account.html";
     })
     .cath((error) => {d
-      alert("Envio errado.");
+      alert("Erro crítico no Backend.");
       console.log(error);
     });
 }
