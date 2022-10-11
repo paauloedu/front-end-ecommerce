@@ -62,10 +62,10 @@ function newPasswordUser(json) {
     .post(`${url}/reset`, json)
     .then((response) => {
       alert("Senha alterada com sucesso.");
-      windows.location.href = "http://127.0.0.1:5500/login-account.html";
+      window.location.href = "http://127.0.0.1:5500/login-account.html";
     })
-    .cath((error) => {d
-      alert("Erro crítico no Backend.");
+    .cath((error) => {
+      alert("Token errado ou usuário não existe");
       console.log(error);
     });
 }
