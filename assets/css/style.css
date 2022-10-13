@@ -61,7 +61,8 @@ a.nav-link:hover {
 .logomarca a img {
   vertical-align: middle;
 }
-li:hover a, li:hover i.far {
+li:hover a.nav-link,
+li:hover i.far {
   color: #e78200;
 }
 i.fas.fa-shopping-cart:hover {
@@ -525,7 +526,60 @@ button#submit:hover {
   color: black;
   text-transform: none;
 }
+.product-form p {
+  text-align: left;
+  padding-left: 10px;
+  margin-bottom: 5px;
+  color: rgb(58, 58, 58);
+}
 /*FIM CADASTRO*/
+/*Cadastro de produtos*/
+.new-product {
+  margin-top: 82px;
+}
+.new-product .inside {
+  text-align: center;
+}
+.np-content {
+  display: inline-block;
+  margin: 60px 0;
+  padding: 20px;
+  border: 1px solid rgb(127, 133, 141);
+  border-radius: 5px;
+  width: 40%;
+}
+.np-content h2 {
+  margin-bottom: 10px;
+}
+.product-form input, .product-form textarea {
+  padding: 10px;
+  width: 210px;
+  border-radius: 6px;
+  border: 1px solid rgb(127, 133, 141);
+  margin-bottom: 20px;
+}
+.product-form {
+  position: relative;
+}
+#nm-product,
+#category {
+  width: 320px;
+}
+#amount,
+#price {
+  width: 125px;
+}
+#description,
+#image {
+  width: 100%;
+}
+.product-form #label-number {
+  margin-left: 348px;
+}
+.np-content .item-form #submit {
+  width: 200px;
+}
+/*FIM_CADASTRO_PROD*/
 @media only screen and (min-width: 1024px) and (max-width: 1129px) {
 }
 

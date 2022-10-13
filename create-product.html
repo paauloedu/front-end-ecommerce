@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cadastrar Produto</title>
+	<script src="https://kit.fontawesome.com/9404c90217.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+	<link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon" />
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poppins" />
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="assets/script/script.js"></script>   
+	<script>
+        $(function(){ 
+                  $("#header").load("home-page.html #header");
+                  $("#footer").load("home-page.html #footer");
+                  $(".footer-under").load("home-page.html .footer-under");
+         });        
+   </script>
+   <script src="https://unpkg.com/axios@0.27.2/dist/axios.min.js"></script> <!-- SOLUÇÃO TEMPORÁRIA -->
+
+</head>
+<body>
+    <div id="principal">
+		<header id="header"></header>
+        <div class="new-product">
+            <div class="inside">
+                <form class="np-content">
+                    <h2 class="form-title">Cadastro de Produto</h2>
+                    <div class="product-form flex">
+                        <input class="input" id="nm-product" type="text" name="nm-product" required="required">
+                        <label for="nm-product" class="input-label">Nome do Produto</label>
+                        <input class="input" id="amount" type="number" name="amount" required="required">
+                        <label for="amount" id="label-number" class="input-label">Quantidade</label>
+                    </div>
+                    <div class="product-form flex">
+                        <input class="input" id="category" type="text" name="category" required="required">
+                        <label for="number" class="input-label">Categoria</label>
+                        <input class="input" id="price" type="text" name="price" placeholder="R$ ____,00" data-slots="_" required="required"> <!-- Ajeitar isso aqui-->
+                        <label for="price" id="label-number" class="input-label">Preço</label>
+                    </div>
+                    <div class="product-form">                        
+                        <textarea class="input" id="description" type="text" name="description" rows="4" required="required" style="resize: none"></textarea>
+                        <label for="description" class="input-label">Descrição</label>
+                    </div>
+                    <div class="product-form">
+                        <p>Selecione uma imagem</p>
+                        <input class="input" id="image" type="file" name="image" required="required">                        
+                    </div>
+                    <div class="item-form">
+                        <button type="submit" id="submit">Cadastrar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <footer>
+			<div id="footer"></div>
+            <div class="footer-under"></div>
+        </footer>
+    </div>
+</body>
+</html>
