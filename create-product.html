@@ -34,10 +34,17 @@
                         <input class="input" id="amount" type="number" name="amount" required="required">
                         <label for="amount" id="label-number" class="input-label">Quantidade</label>
                     </div>
-                    <div class="product-form flex">
-                        <input class="input" id="category" type="text" name="category" required="required">
-                        <label for="number" class="input-label">Categoria</label>
-                        <input class="input" id="price" type="text" name="price" placeholder="R$ ____,00" data-slots="_" required="required"> <!-- Ajeitar isso aqui-->
+                    <div class="product-form flex"> <!-- TODO: Mudar o css pra ficar no padrão-->        
+                        <select name="category" id="category" required="required">
+                            <option value="none">---</option>
+                            <option value="apple">Apple</option>
+                            <option value="audio-video">Audio-Video</option>
+                            <option value="drones">Drones</option>
+                            <option value="notebooks">Notebooks</option>
+                            <option value="smartphones">Smartphones</option>
+                            <option value="smartwatches">Smartwatches</option>
+                        </select>
+                        <input class="input" id="price" type="text" name="price" placeholder="R$ ____,00" data-slots="_" required="required"> <!-- TODO: Ajustar o placeholder-->
                         <label for="price" id="label-number" class="input-label">Preço</label>
                     </div>
                     <div class="product-form">                        
