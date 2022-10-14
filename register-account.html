@@ -28,48 +28,52 @@
             <div class="inside">
                 <form class="register" method="post" action="home-page.html">
                     <h2 class="form-title">Criar conta</h2>
-                    <p class="form-title">Informações do cliente</p>
-                    <div class="register-form flex">
-                        <input class="input" id="f-name" type="text" name="first_name" required="required">
-                        <label for="first_name" class="input-label">Nome</label>
-                        <input class="input" id="l-name" type="text" name="last_name" required="required">
-                        <label for="last_name" class="input-label">Sobrenome</label>
+                    <div class="person">
+                        <p class="form-title">Informações do cliente</p>
+                        <div class="register-form flex">
+                            <input class="input" id="f-name" type="text" name="first_name" required="required">
+                            <label for="first_name" class="input-label">Nome</label>
+                            <input class="input" id="l-name" type="text" name="last_name" required="required">
+                            <label for="last_name" class="input-label">Sobrenome</label>
+                        </div>
+                        <div class="register-form">
+                            <input class="input" id="email" type="email" name="email" required="required">
+                            <label for="email" class="input-label">E-mail</label>
+                        </div>
+                        <div class="register-form flex">
+                            <input class="input" id="pwd" type="password" name="password" required>
+                            <label for="password" class="input-label">Senha</label>
+                            <input class="input" id="cpf" type="text" name="cpf" placeholder="___.___.___-__" data-slots="_" data-accept="[\dA-H]" required>
+                            <label for="cpf" class="input-label">CPF</label>
+                        </div>
+                        <div class="register-form flex">
+                            <input class="input" id="data" type="text" name="birthdate" data-slots="_" onfocus="this.placeholder = ''" placeholder="__/__/____" required>
+                            <label for="birthdate" class="input-label">Data de Nascimento</label>
+                            <input class="input" id="cellphone" type="tel" name="phone" onfocus="this.placeholder = ''" placeholder="(__) _____-____" data-slots="_" data-accept="[\dA-H]" required>
+                            <label for="tel" class="input-label">Telefone</label>
+                        </div>
                     </div>
-                    <div class="register-form">
-                        <input class="input" id="email" type="email" name="email" required="required">
-                        <label for="email" class="input-label">E-mail</label>
-                    </div>
-                    <div class="register-form flex">                        
-                        <input class="input" id="pwd" type="password" name="password" required>
-                        <label for="password" class="input-label">Senha</label>
-                        <input class="input" id="cpf" type="text" name="cpf" placeholder="___.___.___-__" data-slots="_" data-accept="[\dA-H]" required>
-                        <label for="cpf" class="input-label">CPF</label>
-                    </div>                    
-                    <div class="register-form flex">
-                        <input class="input" id="data" type="text" name="birthdate" data-slots="_" onfocus="this.placeholder = ''" placeholder="__/__/____" required>
-                        <label for="birthdate" class="input-label">Data de Nascimento</label>
-                        <input class="input" id="cellphone" type="tel" name="phone" onfocus="this.placeholder = ''" placeholder="(__) _____-____" data-slots="_" data-accept="[\dA-H]" required>
-                        <label for="tel" class="input-label">Telefone</label>
-                    </div>
-                    <p class="form-title">Endereço</p>
-                    <div class="register-form flex">
-                        <input class="input" id="street" type="text" name="street" required="required">
-                        <label for="street" class="input-label">Rua</label>
-                        <input class="input" id="number" type="number" name="number" required="required">
-                        <label for="number" id="label-number" class="input-label">Número</label>
-                    </div>                    
-                    <div class="register-form flex">
-                        <input class="input" id="district" type="text" name="district" required="required">
-                        <label for="district" class="input-label">Bairro</label>
-                        <input class="input" id="cep" type="text" name="cep" placeholder="_____-___" data-slots="_" data-accept="[\dA-H]" onblur="searchCEP(this.value);" required="required">
-                        <label for="cep" class="input-label">CEP</label>
-                    </div>
-                    <script src="assets/script/cep-api.js"></script>
-                    <div class="register-form flex">
-                        <input class="input" id="city" type="text" name="city" required="required">
-                        <label for="city" class="input-label">Cidade</label>
-                        <input class="input" id="state" type="text" name="state" required="required">
-                        <label for="state" class="input-label">Estado</label>
+                    <div class="address">
+                        <p class="form-title">Endereço</p>
+                        <div class="register-form flex">
+                            <input class="input" id="street" type="text" name="street" required="required">
+                            <label for="street" class="input-label">Rua</label>
+                            <input class="input" id="number" type="number" name="number" required="required">
+                            <label for="number" id="label-number" class="input-label">Número</label>
+                        </div>
+                        <div class="register-form flex">
+                            <input class="input" id="district" type="text" name="district" required="required">
+                            <label for="district" class="input-label">Bairro</label>
+                            <input class="input" id="cep" type="text" name="cep" placeholder="_____-___" data-slots="_" data-accept="[\dA-H]" onblur="searchCEP(this.value);" required="required">
+                            <label for="cep" class="input-label">CEP</label>
+                        </div>
+                        <script src="assets/script/cep-api.js"></script>
+                        <div class="register-form flex">
+                            <input class="input" id="city" type="text" name="city" required="required">
+                            <label for="city" class="input-label">Cidade</label>
+                            <input class="input" id="state" type="text" name="state" required="required">
+                            <label for="state" class="input-label">Estado</label>
+                        </div>
                     </div>
                     <div class="item-form flex">
                         <button type="submit" id="submit">Cadastrar</button>
