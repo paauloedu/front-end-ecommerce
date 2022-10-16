@@ -10,13 +10,6 @@ function convertFormToJSON(form) {
   return json;
 }
 
-const myMap = (input) => {
-  return {
-    name: input.name,
-    value: input.value,
-  };
-};
-
 function formataStringData(data) {
   var dia = data.split("/")[0];
   var mes = data.split("/")[1];
@@ -53,4 +46,13 @@ $(".new-password").on("submit", function (e) {
   const newPass = convertFormToJSON(Array.from($(".new-password input")));
   newPasswordUser(newPass);
   console.log(newPass);
+});
+
+$(".np-content").on("submit", function (e) {
+  e.preventDefault();
+  const newProduct = convertFormToJSON(Array.from($(".np-content input")));
+  newProduct.description = document.getElementById('description').value
+  newProduct.category_id // TODO: Mudar as options para dar um get no back e receber tudo de vez
+  //addProduct(newProduct);
+  console.log(newProduct);
 });

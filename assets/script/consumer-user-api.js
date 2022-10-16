@@ -25,7 +25,9 @@ function addUser(json) {
       window.location.href = "http://127.0.0.1:5500/login-account.html";
     })
     .catch((error) => {
-      alert("Não foi possível cadastrar o usuário.");
+      alert(
+        "Não foi possível cadastrar o usuário.\nVerifique os dados e tente novamente."
+      );
       var allInputs = document.querySelectorAll("input");
       allInputs.forEach((element) => {
         element.value = "";
