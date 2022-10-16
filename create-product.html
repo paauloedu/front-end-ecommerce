@@ -37,12 +37,17 @@
                     <div class="product-form flex"> <!-- TODO: Mudar o css pra ficar no padrão-->        
                         <select name="category" id="category" required="required">
                             <option value="none">---</option>
-                            <option value="apple">Apple</option>
-                            <option value="audio-video">Audio-Video</option>
-                            <option value="drones">Drones</option>
-                            <option value="notebooks">Notebooks</option>
-                            <option value="smartphones">Smartphones</option>
-                            <option value="smartwatches">Smartwatches</option>
+                            <option value="ar">Ar e Ventilação</option>
+                            <option value="casa">Casa e Decoração</option>
+                            <option value="celular">Celular & Smartphone</option>
+                            <option value="computadores">Computadores</option>
+                            <option value="eletrodomesticos">Eletrodomésticos</option>
+                            <option value="escritorio">Escritório</option>
+                            <option value="games">Games</option>
+                            <option value="hardw">Hardware</option>
+                            <option value="moda">Moda</option>
+                            <option value="perifericos">Periféricos</option>
+                            <option value="tv">TV</option>
                         </select>
                         <input class="input" id="price" type="text" name="price" placeholder="R$ ____,00" data-slots="_" required="required"> <!-- TODO: Ajustar o placeholder-->
                         <label for="price" id="label-number" class="input-label">Preço</label>
@@ -53,7 +58,7 @@
                     </div>
                     <div class="product-form">
                         <p>Selecione uma imagem</p>
-                        <input class="input" id="image" type="file" name="image" required="required">                        
+                        <input class="input" id="image" type="file" accept="image/*" name="image" required="required">                        
                     </div>
                     <div class="item-form">
                         <button type="submit" id="submit">Cadastrar</button>

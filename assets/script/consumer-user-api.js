@@ -57,7 +57,6 @@ function forgetUser(json) {
 }
 
 function newPasswordUser(json) {
-  /* Entender como enviar o campo Token */
   axios
     .post(`${url}/reset`, json)
     .then((response) => {

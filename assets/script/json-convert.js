@@ -26,10 +26,9 @@ function formataStringData(data) {
 
 $(".login").on("submit", function (e) {
   e.preventDefault();
-  const form = $(e.target);
-  const json = convertFormToJSON(form);
-  loginUser(json);
-  console.log(json);
+  const login = convertFormToJSON(Array.from($(".login input")));
+  loginUser(login);
+  console.log(login);
 });
 
 $(".register").on("submit", function (e) {
@@ -44,16 +43,14 @@ $(".register").on("submit", function (e) {
 
 $(".login-forget").on("submit", function (e) {
   e.preventDefault();
-  const form = $(e.target);
-  const json = convertFormToJSON(form);
-  forgetUser(json);
-  console.log(json);
+  const forget = convertFormToJSON(Array.from($(".login-forget input")));
+  forgetUser(forget);
+  console.log(forget);
 });
 
 $(".new-password").on("submit", function (e) {
   e.preventDefault();
-  const form = $(e.target);
-  const json = convertFormToJSON(form);
-  newPasswordUser(json);
-  console.log(json);
+  const newPass = convertFormToJSON(Array.from($(".new-password input")));
+  newPasswordUser(newPass);
+  console.log(newPass);
 });
