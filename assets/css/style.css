@@ -551,7 +551,9 @@ button#submit:hover {
 .np-content h2 {
   margin-bottom: 10px;
 }
-.product-form input, .product-form textarea, .product-form select {
+.product-form input,
+.product-form textarea,
+.product-form select {
   padding: 10px;
   width: 210px;
   border-radius: 6px;
@@ -579,8 +581,13 @@ button#submit:hover {
 .np-content .item-form #submit {
   width: 200px;
 }
-option:active, option:checked {
+option:active,
+option:checked {
   border: 1px solid#e78200;
+}
+.product-form select:focus,
+.product-form select:valid {
+  border: 1px solid #f87f3b;
 }
 /*FIM_CADASTRO_PROD*/
 @media only screen and (min-width: 1024px) and (max-width: 1129px) {

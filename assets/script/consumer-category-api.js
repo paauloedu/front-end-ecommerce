@@ -7,9 +7,8 @@ function getCategory(category) {
         Authorization: `Bearer ${token}`,
       },
     })
-    .then((response) => {
-      const id = response.data[0].id;
-      return id;
+    .then((response) => {      
+      return response.data[0].id;
     })
     .catch((error) => {
       console.log(error);
@@ -25,8 +24,7 @@ const getCategory = async (category) => {
       headers: {
         Authorization: `Bearer ${token}`,
       },
-    });
-    //console.log(response.data[0].id);
+    });    
     return response.data[0].id;
   } catch (error) {
     console.log(error);
