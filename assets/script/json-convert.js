@@ -48,11 +48,14 @@ $(".new-password").on("submit", function (e) {
   console.log(newPass);
 });
 
-$(".np-content").on("submit", function (e) {
+$(".np-content").on("submit", async (e) => {
   e.preventDefault();
   const newProduct = convertFormToJSON(Array.from($(".np-content input")));
-  newProduct.description = document.getElementById('description').value
-  newProduct.category_id // TODO: Mudar as options para dar um get no back e receber tudo de vez
-  //addProduct(newProduct);
+  newProduct.description = document.getElementById("description").value;
+  var select = document.getElementById("category");
+  newProduct.category_id = await getCategory(
+    select.options[select.selectedIndex].value
+  );
+  addProduct(newProduct);
   console.log(newProduct);
 });

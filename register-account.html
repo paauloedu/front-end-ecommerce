@@ -56,18 +56,18 @@
                     <div class="address">
                         <p class="form-title">Endereço</p>
                         <div class="register-form flex">
-                            <input class="input" id="street" type="text" name="street" required="required">
-                            <label for="street" class="input-label">Rua</label>
-                            <input class="input" id="number" type="number" name="number" required="required">
-                            <label for="number" id="label-number" class="input-label">Número</label>
-                        </div>
-                        <div class="register-form flex">
-                            <input class="input" id="district" type="text" name="district" required="required">
-                            <label for="district" class="input-label">Bairro</label>
                             <input class="input" id="cep" type="text" name="cep" placeholder="_____-___" data-slots="_" data-accept="[\dA-H]" onblur="searchCEP(this.value);" required="required">
                             <label for="cep" class="input-label">CEP</label>
+                            <input class="input" id="district" type="text" name="district" required="required">
+                            <label for="district" class="input-label">Bairro</label>
                         </div>
                         <script src="assets/script/cep-api.js"></script>
+                        <div class="register-form flex">
+                            <input class="input" id="street" type="text" name="street" required="required">
+                            <label for="street" class="input-label">Rua</label>
+                            <input class="input" id="number" type="number" name="number" required="required" min="0">
+                            <label for="number" id="label-number" class="input-label">Número</label>
+                        </div>
                         <div class="register-form flex">
                             <input class="input" id="city" type="text" name="city" required="required">
                             <label for="city" class="input-label">Cidade</label>

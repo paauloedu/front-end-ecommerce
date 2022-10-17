@@ -20,6 +20,7 @@
    </script>
    <script src="https://unpkg.com/axios@0.27.2/dist/axios.min.js"></script> <!-- SOLUÇÃO TEMPORÁRIA -->
    <script src="assets/script/consumer-prod-api.js"></script>
+   <script src="assets/script/consumer-category-api.js"></script>
 </head>
 <body>
     <div id="principal">
@@ -31,13 +32,13 @@
                     <div class="product-form flex">
                         <input class="input" id="nm-product" type="text" name="name" required="required">
                         <label for="nm-product" class="input-label">Nome do Produto</label>
-                        <input class="input" id="amount" type="number" name="amount" required="required">
+                        <input class="input" id="amount" type="number" name="amount" required="required" min="0">
                         <label for="amount" id="label-number" class="input-label">Quantidade</label>
                     </div>
                     <div class="product-form flex"> <!-- TODO: Mudar o css pra ficar no padrão-->        
                         <select name="category" id="category" required="required">
                             <option value="" disabled selected></option>
-                            <option value="ar">Ar e Ventilação</option>
+                            <option value="vent">Ar e Ventilação</option>
                             <option value="casa">Casa e Decoração</option>
                             <option value="celular">Celular & Smartphone</option>
                             <option value="computadores">Computadores</option>
@@ -49,17 +50,18 @@
                             <option value="perifericos">Periféricos</option>
                             <option value="tv">TV</option>
                         </select>
-                        <input class="input" id="price" type="text" name="price" pattern="^[1-9]\d{0,4}(?:\.\d{0,5})?$" required="required"> <!-- TODO: Ajustar o placeholder-->
+                        <input class="input" id="price" type="text" name="price" pattern="^[1-9]\d{0,4}(?:\.\d{0,5})?$" required="required" min="0"> <!-- TODO: Ajustar o placeholder-->
                         <label for="price" id="label-number" class="input-label">Preço</label>
                     </div>
                     <div class="product-form">                        
                         <textarea class="input" id="description" type="text" name="description" rows="4" required style="resize: none"></textarea>
                         <label for="description" class="input-label">Descrição</label>
                     </div>
-                    <div class="product-form">
+                    <!-- Por enquanto, deixar sem para testes -->
+                    <!-- <div class="product-form">
                         <p>Selecione uma imagem</p>
                         <input class="input" id="image" type="file" accept="image/*" name="image" required="required">                        
-                    </div>
+                    </div> -->
                     <div class="item-form">
                         <button type="submit" id="submit">Cadastrar</button>
                     </div>
