@@ -4,23 +4,24 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Cadastrar Produto</title>
+	<title>Gerenciar Produto</title>
 	<script src="https://kit.fontawesome.com/9404c90217.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/css/style.css">
 	<link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon" />
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poppins" />
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-    <script src="assets/script/script.js"></script>   
 	<script>
         $(function(){ 
                   $("#header").load("home-page.html #header");
                   $("#footer").load("home-page.html #footer");
                   $(".footer-under").load("home-page.html .footer-under");
-         });        
+         });
    </script>
    <script src="https://unpkg.com/axios@0.27.2/dist/axios.min.js"></script> <!-- SOLUÇÃO TEMPORÁRIA -->
    <script src="assets/script/productController.js"></script>
    <script src="assets/script/categoryController.js"></script>
+   <script src="https://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.js"></script>
+   <script src="assets/script/typeahead.js"></script>
 </head>
 <body>
     <div id="principal">
@@ -28,9 +29,9 @@
         <div class="new-product">
             <div class="inside">
                 <form class="np-content">
-                    <h2 class="form-title">Cadastro de Produto</h2>
-                    <div class="product-form flex">
-                        <input class="input" id="nm-product" type="text" name="name" required="required">
+                    <h2 class="form-title">Gerenciar Produto</h2>
+                    <div id="the-basics" class="product-form flex">
+                        <input class="typeahead input" id="nm-product" type="text" name="name" required="required">
                         <label for="nm-product" class="input-label">Nome do Produto</label>
                         <input class="input" id="amount" type="number" name="amount" required="required" min="0">
                         <label for="amount" id="label-number" class="input-label">Quantidade</label>
@@ -62,8 +63,9 @@
                         <p>Selecione uma imagem</p>
                         <input class="input" id="image" type="file" accept="image/*" name="image" required="required">                        
                     </div> -->
-                    <div class="item-form">
-                        <button type="submit" id="submit">Cadastrar</button>
+                    <div class="item-form flex">
+                        <button type="submit" id="submit">Atualizar</button>
+                        <button type="submit" id="delete">Deletar</button>
                     </div>
                 </form>
                 <script src="assets/script/json-convert.js"></script>

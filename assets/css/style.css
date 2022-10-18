@@ -578,7 +578,7 @@ button#submit:hover {
 .product-form #label-number {
   margin-left: 348px;
 }
-.np-content .item-form #submit {
+.np-content .item-form #submit, .np-content .item-form #delete {
   width: 200px;
 }
 option:active,
@@ -588,6 +588,35 @@ option:checked {
 .product-form select:focus,
 .product-form select:valid {
   border: 1px solid #f87f3b;
+}
+button {
+  cursor: pointer;
+}
+select {
+  font: inherit;
+}
+.item-form.flex {
+  width: auto;
+}
+button#delete {
+  color: #f83b3b;
+  font-family: "poppins", Helvetica;
+  font-size: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+  width: inherit;
+  padding: 5px;
+  background-color: transparent;
+  border-radius: 6px;
+  border: 1px solid #f83b3b;
+}
+button#delete:hover {
+  color: white;
+  background-color: #f83b3b;
+  border: 1px solid black;
+}
+.item-form button#delete {
+  padding: 0;
 }
 /*FIM_CADASTRO_PROD*/
 @media only screen and (min-width: 1024px) and (max-width: 1129px) {
