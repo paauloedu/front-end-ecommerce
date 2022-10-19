@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="assets/css/style.css">
 	<link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon" />
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poppins" />
+	<script src="assets/script/typeahead.js"></script>
 </head>
 <body>
 	<div id="principal">
@@ -19,7 +20,7 @@
 				</div>				
 				<div id="search-wrap">
 					<form role="search" class= "search-from" method="get">
-						<input type="text" class="search-field" placeholder="Procure por um item" value="" name="">                            
+						<input type="text" class="typeahead search-field" placeholder="Procure por um item" value="" name=""> <!-- TODO: Ajeitar o CSS para barra de pesquisa -->                        
 						<i class="fa fa-search" aria-hidden="true"></i>
 						<input type="submit" class="search-submit" value="">
 					</form>

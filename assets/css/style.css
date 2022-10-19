@@ -527,7 +527,7 @@ button#submit:hover {
   text-transform: none;
 }
 /*FIM CADASTRO*/
-/*Cadastro de produtos*/
+/*Cadastro, Atualização e Delete de produtos*/
 .product-form p {
   text-align: left;
   padding-left: 10px;
@@ -578,7 +578,8 @@ button#submit:hover {
 .product-form #label-number {
   margin-left: 348px;
 }
-.np-content .item-form #submit, .np-content .item-form #delete {
+.np-content .item-form #submit,
+.np-content .item-form #delete {
   width: 200px;
 }
 option:active,
@@ -594,6 +595,9 @@ button {
 }
 select {
   font: inherit;
+}
+#category {
+  padding: 6px;
 }
 .item-form.flex {
   width: auto;
@@ -617,6 +621,25 @@ button#delete:hover {
 }
 .item-form button#delete {
   padding: 0;
+}
+.tt-menu {
+  background: white;
+  border: 1px solid black;
+  margin-top: -20px;
+  max-height: 300px;
+  overflow-y: auto;
+  width: 100%;
+  text-align: left;
+}
+.tt-suggestion {
+  padding: 5px 10px;
+}
+.tt-suggestion:hover,
+.tt-suggestion.tt-cursor {
+  color: white;
+  background: #f87f3b;
+  cursor: pointer;
+  padding: 10px 15px;
 }
 /*FIM_CADASTRO_PROD*/
 @media only screen and (min-width: 1024px) and (max-width: 1129px) {
