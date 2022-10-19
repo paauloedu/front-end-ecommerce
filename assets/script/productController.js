@@ -48,3 +48,36 @@ function getNameProducts() {
       console.log(error);
     });
 }
+
+function getProducts() {
+  return axios
+    .get(`${url}?pageSize=3000`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    })
+    .then((response) => {      
+      console.log(response.data.results);      
+      return response.data.results;
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+}
+
+function updateProduct(json) {
+  axios
+    .put(`${url}/${id}`, json, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    })
+    .then((response) => {
+      console.log(response)
+      alert("Produto atualizado com sucesso.");
+    })
+    .catch((error) => {
+      alert("Não foi possível atualizar o produto.\nTente novamente.");
+      console.log(error);
+    });
+}

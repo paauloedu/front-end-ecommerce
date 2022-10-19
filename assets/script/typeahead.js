@@ -1,6 +1,16 @@
 $(document).ready(async function () {
-
-  var nameProducts = await getNameProducts();
+  
+  var products = await getProducts();  
+  const array = products.map(({ name }) => {
+    return { name };
+  });
+  var namesProducts = [];
+  let i = 0;
+  for (const name of array) {
+    namesProducts[i] = array[i].name;
+    i++;
+  }
+  console.log(namesProducts);
 
   var substringMatcher = function (strs) {
     return function findMatches(q, cb) {
@@ -27,8 +37,8 @@ $(document).ready(async function () {
       minLength: 1,
     },
     {
-      name: "nameProducts",
-      source: substringMatcher(nameProducts),
+      name: "namesProducts",
+      source: substringMatcher(namesProducts),
     }
   );
 });
