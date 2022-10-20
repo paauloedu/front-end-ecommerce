@@ -567,7 +567,8 @@ button#submit:hover, #update:hover {
   position: relative;
 }
 #nm-product,
-#category {
+#category,
+#id {
   width: 320px;
 }
 #amount,
@@ -603,7 +604,7 @@ select {
 #category {
   padding: 6px;
 }
-.item-form.flex {
+.np-content .item-form.flex {
   width: auto;
 }
 button#delete {

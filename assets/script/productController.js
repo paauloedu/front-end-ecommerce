@@ -30,7 +30,7 @@ function getNameProducts() {
         Authorization: `Bearer ${token}`,
       },
     })
-    .then((response) => {      
+    .then((response) => {
       console.log(response.data);
       console.log(response.data.results[0]);
       const array = response.data.results.map(({ name }) => {
@@ -39,7 +39,7 @@ function getNameProducts() {
       var namesProducts = [];
       let i = 0;
       for (const name of array) {
-        namesProducts[i] = array[i].name
+        namesProducts[i] = array[i].name;
         i++;
       }
       console.log(array[0].name);
@@ -59,7 +59,7 @@ function getProducts() {
         Authorization: `Bearer ${token}`,
       },
     })
-    .then((response) => {          
+    .then((response) => {
       return response.data.results;
     })
     .catch((error) => {
@@ -75,11 +75,30 @@ function updateProduct(json, id) {
       },
     })
     .then((response) => {
-      console.log(response)
+      console.log(response);
       alert("Produto atualizado com sucesso.");
     })
     .catch((error) => {
       alert("Não foi possível atualizar o produto.\nTente novamente.");
+      console.log(error);
+    });
+}
+
+function deleteProduct(id) {
+  axios
+    .delete(`${url}/${id}`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    })
+    .then((response) => {
+      alert(`Produto: ${response.data.name} deletado.`);
+      var allInputs = document.querySelectorAll("input");
+      allInputs.forEach((element) => {
+        element.value = "";
+      });
+    })
+    .catch((error) => {
       console.log(error);
     });
 }

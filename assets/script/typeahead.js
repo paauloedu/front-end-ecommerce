@@ -3,8 +3,11 @@ $(document).ready(async function () {
   console.log(products);
 
   function getSugestions(query, callBack) {
-    const results = products.filter((product) => { /* Filtrando no objeto pelos nomes */
-      return product.name.toLowerCase().indexOf(query.toLowerCase()) > -1; /* noRegularExpressions apenas comparar tudo minúsculo */
+    const results = products.filter((product) => {
+      /* Filtrando no objeto pelos nomes */
+      return (
+        product.name.toLowerCase().indexOf(query.toLowerCase()) > -1
+      ); /* noRegularExpressions apenas comparar tudo minúsculo */
     });
     callBack(results);
   }
@@ -17,12 +20,25 @@ $(document).ready(async function () {
     },
     {
       name: "namesProducts",
-      source: getSugestions, /* Modificando as sugestões que ele irá me retornar */
-      display: (product) => product.name, /* Ensinando ao typeahead o que ele irá renderizar na tela */
+      source:
+        getSugestions /* Modificando as sugestões que ele irá me retornar */,
+      display: (product) =>
+        product.name /* Ensinando ao typeahead o que ele irá renderizar na tela */,
     }
   );
   $(".typeahead").bind("typeahead:select", function (ev, product) {
     console.log("Selection: " + product.id);
-    // Lógica para jogar informações na tela
+
+    document.getElementById("price").value = product.price;
+    document.getElementById("amount").value = product.amount;
+    document.getElementById("description").value = product.description;
+    document.getElementById("id").value = product.id;
+
+    if (document.getElementById("nm-product").value == "") {
+      document.getElementById("price").value = "";
+      document.getElementById("amount").value = "";
+      document.getElementById("description").value = "";
+    }
+    // TODO: Wipar campos ao apagar o nome do produto
   });
 });

@@ -64,16 +64,15 @@ $("#mn-product button").click(async function (e) {
   e.preventDefault();
   if ($(this).attr("id") == "update") {
     // O que fazer caso clique em ATUALIZAR
+    var id = document.getElementById("id").value;
     const changeProduct = convertFormToJSON(Array.from($("#mn-product input")));
     changeProduct.description = document.getElementById("description").value;
-    var select = document.getElementById("category");
-    changeProduct.category_id = await getCategory(
-      select.options[select.selectedIndex].value
-    );
-    updateProduct(changeProduct, products); //Aqui eu teria que ter...
+    updateProduct(changeProduct, id); //Aqui eu teria que ter...
     console.log(changeProduct);
   }
   if ($(this).attr("id") == "delete") {
     // O que fazer caso clique em DELETAR
+    var id = document.getElementById("id").value;
+    deleteProduct(id);
   }
 });

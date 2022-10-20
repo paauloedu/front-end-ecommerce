@@ -37,20 +37,8 @@
                         <label for="amount" id="label-number" class="input-label">Quantidade</label>
                     </div>
                     <div class="product-form flex">     
-                        <select name="category" id="category" required="required">
-                            <option value="" disabled selected>Categoria</option>
-                            <option value="vent">Ar e Ventilação</option>
-                            <option value="casa">Casa e Decoração</option>
-                            <option value="celular">Celular & Smartphone</option>
-                            <option value="computadores">Computadores</option>
-                            <option value="eletrodomesticos">Eletrodomésticos</option>
-                            <option value="escritorio">Escritório</option>
-                            <option value="games">Games</option>
-                            <option value="hardw">Hardware</option>
-                            <option value="moda">Moda</option>
-                            <option value="perifericos">Periféricos</option>
-                            <option value="tv">TV</option>
-                        </select>
+                        <input class="input" id="id" type="text" name="id" required="required" disabled>
+                        <!-- <label for="nm-product" class="input-label">ID do Produto</label> -->
                         <input class="input" id="price" type="text" name="price" pattern="^[1-9]\d{0,4}(?:\.\d{0,5})?$" required="required" min="0"> <!-- TODO: Ajustar o placeholder-->
                         <label for="price" id="label-number" class="input-label">Preço</label>
                     </div>
