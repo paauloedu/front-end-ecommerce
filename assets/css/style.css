@@ -238,6 +238,9 @@ i.fas.fa-shopping-cart {
   max-height: 33px;
   margin-top: 8px;
 }
+.search-from .tt-menu {
+  margin-top: auto;
+}
 /*PRODUTOS*/
 .product-content {
   height: 400px;
@@ -386,7 +389,7 @@ small.info,
   padding-top: 18px;
   font-size: 18px;
 }
-button#submit {
+button#submit, #update {
   color: #f87f3b;
   font-family: "poppins", Helvetica;
   font-size: 25px;
@@ -403,7 +406,7 @@ input#password {
   font-size: 20px;
   font-family: "poppins", Helvetica;
 }
-button#submit:hover {
+button#submit:hover, #update:hover {
   color: white;
   background-color: #f87f3b;
   border: 1px solid black;
@@ -509,7 +512,7 @@ button#submit:hover {
 .input::placeholder {
   opacity: 0;
 }
-.item-form button#submit {
+.item-form button#submit, .item-form button#update {
   padding: 0;
 }
 #number {
@@ -579,7 +582,8 @@ button#submit:hover {
   margin-left: 348px;
 }
 .np-content .item-form #submit,
-.np-content .item-form #delete {
+.np-content .item-form #delete,
+.np-content .item-form #update {
   width: 200px;
 }
 option:active,
@@ -633,6 +637,9 @@ button#delete:hover {
 }
 .tt-suggestion {
   padding: 5px 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .tt-suggestion:hover,
 .tt-suggestion.tt-cursor {

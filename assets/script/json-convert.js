@@ -48,9 +48,9 @@ $(".new-password").on("submit", function (e) {
   console.log(newPass);
 });
 
-$(".np-content").on("submit", async (e) => {
+$("#cr-product").on("submit", async (e) => {
   e.preventDefault();
-  const newProduct = convertFormToJSON(Array.from($(".np-content input")));
+  const newProduct = convertFormToJSON(Array.from($("#cr-product input")));
   newProduct.description = document.getElementById("description").value;
   var select = document.getElementById("category");
   newProduct.category_id = await getCategory(
@@ -58,4 +58,22 @@ $(".np-content").on("submit", async (e) => {
   );
   addProduct(newProduct);
   console.log(newProduct);
+});
+
+$("#mn-product button").click(async function (e) {
+  e.preventDefault();
+  if ($(this).attr("id") == "update") {
+    // O que fazer caso clique em ATUALIZAR
+    const changeProduct = convertFormToJSON(Array.from($("#mn-product input")));
+    changeProduct.description = document.getElementById("description").value;
+    var select = document.getElementById("category");
+    changeProduct.category_id = await getCategory(
+      select.options[select.selectedIndex].value
+    );
+    updateProduct(changeProduct, products); //Aqui eu teria que ter...
+    console.log(changeProduct);
+  }
+  if ($(this).attr("id") == "delete") {
+    // O que fazer caso clique em DELETAR
+  }
 });

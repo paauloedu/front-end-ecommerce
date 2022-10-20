@@ -33,6 +33,8 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+// TODO: Colocar um SE apenas na home page
+
 let count = 1;
 document.getElementById("slider-btn1").checked = true;
 

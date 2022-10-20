@@ -1,34 +1,13 @@
 $(document).ready(async function () {
-  
-  var products = await getProducts();  
-  const array = products.map(({ name }) => {
-    return { name };
-  });
-  var namesProducts = [];
-  let i = 0;
-  for (const name of array) {
-    namesProducts[i] = array[i].name;
-    i++;
+  var products = await getProducts();
+  console.log(products);
+
+  function getSugestions(query, callBack) {
+    const results = products.filter((product) => { /* Filtrando no objeto pelos nomes */
+      return product.name.toLowerCase().indexOf(query.toLowerCase()) > -1; /* noRegularExpressions apenas comparar tudo minúsculo */
+    });
+    callBack(results);
   }
-  console.log(namesProducts);
-
-  var substringMatcher = function (strs) {
-    return function findMatches(q, cb) {
-      var matches, substrRegex;
-
-      matches = [];
-
-      substrRegex = new RegExp(q, "i");
-
-      $.each(strs, function (i, str) {
-        if (substrRegex.test(str)) {
-          matches.push(str);
-        }
-      });
-
-      cb(matches);
-    };
-  };
 
   $("div .typeahead").typeahead(
     {
@@ -38,7 +17,12 @@ $(document).ready(async function () {
     },
     {
       name: "namesProducts",
-      source: substringMatcher(namesProducts),
+      source: getSugestions, /* Modificando as sugestões que ele irá me retornar */
+      display: (product) => product.name, /* Ensinando ao typeahead o que ele irá renderizar na tela */
     }
   );
+  $(".typeahead").bind("typeahead:select", function (ev, product) {
+    console.log("Selection: " + product.id);
+    // Lógica para jogar informações na tela
+  });
 });

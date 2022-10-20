@@ -10,8 +10,11 @@ function addProduct(json) {
       },
     })
     .then((response) => {
-      /* TODO: Pode exibir o nome do produto ao cadastrar */
-      alert("Produto cadastrado com sucesso.");
+      alert(`Produto: ${response.data.name} cadastrado com sucesso.`);
+      var allInputs = document.querySelectorAll("input");
+      allInputs.forEach((element) => {
+        element.value = "";
+      });
     })
     .catch((error) => {
       alert("Não foi possível cadastrar o produto.\nTente novamente.");
@@ -56,8 +59,7 @@ function getProducts() {
         Authorization: `Bearer ${token}`,
       },
     })
-    .then((response) => {      
-      console.log(response.data.results);      
+    .then((response) => {          
       return response.data.results;
     })
     .catch((error) => {
@@ -65,7 +67,7 @@ function getProducts() {
     });
 }
 
-function updateProduct(json) {
+function updateProduct(json, id) {
   axios
     .put(`${url}/${id}`, json, {
       headers: {
