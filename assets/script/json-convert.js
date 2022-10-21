@@ -63,16 +63,12 @@ $("#cr-product").on("submit", async (e) => {
 $("#mn-product button").click(async function (e) {
   e.preventDefault();
   if ($(this).attr("id") == "update") {
-    // O que fazer caso clique em ATUALIZAR
-    var id = document.getElementById("id").value;
     const changeProduct = convertFormToJSON(Array.from($("#mn-product input")));
     changeProduct.description = document.getElementById("description").value;
-    updateProduct(changeProduct, id); //Aqui eu teria que ter...
+    updateProduct(changeProduct, document.getElementById("id").value); //Aqui eu teria que ter...
     console.log(changeProduct);
   }
   if ($(this).attr("id") == "delete") {
-    // O que fazer caso clique em DELETAR
-    var id = document.getElementById("id").value;
-    deleteProduct(id);
+    deleteProduct(document.getElementById("id").value);
   }
 });

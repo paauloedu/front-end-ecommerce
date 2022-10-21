@@ -93,10 +93,7 @@ function deleteProduct(id) {
     })
     .then((response) => {
       alert(`Produto: ${response.data.name} deletado.`);
-      var allInputs = document.querySelectorAll("input");
-      allInputs.forEach((element) => {
-        element.value = "";
-      });
+      location.reload();
     })
     .catch((error) => {
       console.log(error);

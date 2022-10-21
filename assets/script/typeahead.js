@@ -33,12 +33,12 @@ $(document).ready(async function () {
     document.getElementById("amount").value = product.amount;
     document.getElementById("description").value = product.description;
     document.getElementById("id").value = product.id;
-
-    if (document.getElementById("nm-product").value == "") {
-      document.getElementById("price").value = "";
-      document.getElementById("amount").value = "";
-      document.getElementById("description").value = "";
-    }
     // TODO: Wipar campos ao apagar o nome do produto
   });
+
+  function clearForm() {
+    document.getElementById("price").value = "";
+    document.getElementById("amount").value = "";
+    document.getElementById("description").value = "";
+  }
 });
