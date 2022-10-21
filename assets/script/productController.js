@@ -1,6 +1,6 @@
 const url = "https://api-eng-soft-2.herokuapp.com/v1/products";
 const token =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM2NzQzNjdmLTgxMDYtNGVkMy05YmVjLWVkY2Q3MjY4YmViMyIsImlhdCI6MTY2NTg5MDcyOCwiZXhwIjoxNjY2MzIyNzI4fQ.h0eFL1R0UpzYulz8T4jvGZShgH-PmGfEy9ze9XxvKgM";
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM2NzQzNjdmLTgxMDYtNGVkMy05YmVjLWVkY2Q3MjY4YmViMyIsImlhdCI6MTY2NjM1NDg0NCwiZXhwIjoxNjY2Nzg2ODQ0fQ.rKYDsw08Llk-jElkqe9mKARVKJ8GLKSH51qLGuane8g";
 
 function addProduct(json) {
   axios
@@ -77,6 +77,7 @@ function updateProduct(json, id) {
     .then((response) => {
       console.log(response);
       alert("Produto atualizado com sucesso.");
+      location.reload();
     })
     .catch((error) => {
       alert("Não foi possível atualizar o produto.\nTente novamente.");

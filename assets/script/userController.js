@@ -1,6 +1,6 @@
 const url = "https://api-eng-soft-2.herokuapp.com/v1/users";
 const token =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM2NzQzNjdmLTgxMDYtNGVkMy05YmVjLWVkY2Q3MjY4YmViMyIsImlhdCI6MTY2NTMyODQ5NCwiZXhwIjoxNjY1NzYwNDk0fQ.hv66-k7NJ50QU7z73gTJUGrx7yhd28zvkD3u2Dle16Y";
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM2NzQzNjdmLTgxMDYtNGVkMy05YmVjLWVkY2Q3MjY4YmViMyIsImlhdCI6MTY2NjM1NDg0NCwiZXhwIjoxNjY2Nzg2ODQ0fQ.rKYDsw08Llk-jElkqe9mKARVKJ8GLKSH51qLGuane8g";
 
 function getUser() {
   axios

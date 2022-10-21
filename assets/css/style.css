@@ -649,6 +649,16 @@ button#delete:hover {
   cursor: pointer;
   padding: 10px 15px;
 }
+input#id:disabled + .input-label {
+  color: #f87f3b;
+  transform: translateX(10px) translateY(-7px);
+  font-size: 15px;
+  padding: 0 5px;
+  background: #fafafa;
+}
+.input:disabled {
+  border: 1px solid #f87f3b;
+}
 /*FIM_CADASTRO_PROD*/
 @media only screen and (min-width: 1024px) and (max-width: 1129px) {
 }
