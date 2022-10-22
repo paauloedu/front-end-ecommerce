@@ -34,6 +34,8 @@ $(document).ready(async function () {
     document.getElementById("description").value = product.description;
     document.getElementById("id").value = product.id;
     document.getElementById("id").setAttribute("disabled", "disabled");
+    document.getElementById('input-tpahead').style.color = '#f87f3b'
+    document.getElementById('nm-product').style.border = '1px solid #f87f3b'
     // TODO: Wipar campos ao apagar o nome do produto
   });
 

@@ -248,6 +248,101 @@ i.fas.fa-shopping-cart {
   align-items: center;
   justify-content: space-around;
 }
+.category-images .inside {
+  width: 1280px;
+  margin: 60px auto 0;
+}
+.category-images .inside ul{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.category-images .inside img {
+  display:inline-block;
+  position:relative;
+  margin-bottom: 40px;    
+  max-height:390px;
+  width: 100%;
+}
+.category-images .inside li:nth-child(3) img, 
+.category-images .inside li:nth-child(4) img  {
+  max-height:280px;
+}
+.category-images .inside li{
+  position: relative;
+  list-style-type: none;
+  text-align: center;
+}
+.category-images .inside li:nth-child(1),
+.category-images .inside li:nth-child(4){   
+  width: 34%;
+}
+.category-images .inside li:nth-child(2),
+.category-images .inside li:nth-child(3){   
+  width: 64%;
+}
+.category-images .inside p{
+  position: absolute;
+  font-size: 35px;
+  font-weight: bold;
+  color: white;
+  bottom: 45%;
+  left: 20px;
+  text-align: center;
+  line-height: 40px;
+}
+.category-images .inside .btn-buy{
+  position: absolute;
+  bottom: 32%;
+  width: 130px;
+  height: 40px;
+  left: 20px;
+  color:white;
+  background: #f87f3b;
+  border:none;
+  cursor: pointer;
+  font-size: 16px;
+}
+.category-images .inside .btn-buy:hover{
+  background:white;
+  color: #f87f3b;
+  border: 1px  solid #f87f3b;
+}
+/*TODO: Revisar isso aqui*/
+.category-images li:nth-child(1) .btn-buy{
+  left: 34%;
+}
+.category-images li:nth-child(1) p {
+  left: 24%;
+  color: #f87f3b;
+}
+.category-images li:nth-child(2) .btn-buy{
+  left: 40%;
+}
+.category-images li:nth-child(2) p {
+  left: 34%;
+  color: #f87f3b;
+}
+.category-images li:nth-child(3) .btn-buy{
+  left: 43%;
+}
+.category-images li:nth-child(3) p {
+  left: 28%;
+  color: white;
+  bottom: 50%;
+}
+.category-images li:nth-child(4) .btn-buy{
+  left: 38%;
+}
+.category-images li:nth-child(4) p {
+  left: 24%;
+  color: white;
+  bottom: 50%;
+}
 /*FIM PRODUTOS*/
 /*FOOTER*/
 #footer {
@@ -658,6 +753,16 @@ input#id:disabled + .input-label {
 }
 .input:disabled {
   border: 1px solid #f87f3b;
+}
+#input-tpahead {
+  color: #7f858d;
+  transform: translateX(10px) translateY(-7px);
+  font-size: 15px;
+  padding: 0 5px;
+  background: #fff;
+}
+#nm-product{
+  border: 1px solid #7f858d;
 }
 /*FIM_CADASTRO_PROD*/
 @media only screen and (min-width: 1024px) and (max-width: 1129px) {

@@ -31,13 +31,12 @@
                 <form id="mn-product" class="np-content">
                     <h2 class="form-title">Gerenciar Produto</h2>
                     <div class="product-form flex">
-                        <input class="typeahead input" id="nm-product" type="text" name="name" required="required">
-                        <!-- <label for="nm-product" id="input-tpahead" class="input-label">Nome do Produto</label> -->
+                        <input class="typeahead input" id="nm-product" type="text" name="name" required="required" autofocus>
+                        <label for="nm-product" id="input-tpahead" class="input-label">Nome do Produto</label>
                         <input class="input" id="amount" type="number" name="amount" required="required" min="0">
                         <label for="amount" id="label-number" class="input-label">Quantidade</label>
                     </div>
                     <div class="product-form flex">
-                        <!-- TODO: Posso usar aquele CSS pra quando ele for disabled e adicionar disabled nele, apenas quando algo digitado   -->
                         <input class="input" id="id" type="text" name="id" required="required">
                         <label for="nm-product" class="input-label">ID do Produto</label>
                         <input class="input" id="price" type="text" name="price" pattern="^[1-9]\d{0,4}(?:\.\d{0,5})?$" required="required" min="0"> <!-- TODO: Ajustar o placeholder-->
