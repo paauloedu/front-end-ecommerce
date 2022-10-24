@@ -7,7 +7,7 @@ function getUser(id, token) {
         Authorization: `Bearer ${token}`,
       },
     })
-    .then((response) => {      
+    .then((response) => {
       return response.data;
     })
     .catch((error) => console.log(error));

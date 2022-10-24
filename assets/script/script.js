@@ -36,7 +36,8 @@ document.addEventListener("DOMContentLoaded", () => {
 var home = window.location.pathname == "/home-page.html";
 if (home) {
   let count = 1;
-  document.getElementById("slider-btn1").checked = true;
+  if (document.getElementById("slider-btn1"))
+    document.getElementById("slider-btn1").checked = true;
 
   setInterval(function () {
     nextImage();
@@ -47,16 +48,17 @@ if (home) {
     if (count > 4) {
       count = 1;
     }
-    document.getElementById("slider-btn" + count).checked = true;
+    const btn = document.getElementById("slider-btn" + count);
+    if (btn) btn.checked = true;
   }
 }
 // TODO: Mudar nome da variavel token provisória
 $(document).ready(function nameAccount() {
   if (userLoggedin()) {
-    let acc = document.getElementById("nav-link");
-    acc.innerHTML = `<a id="nav-link" class="nav-link" href="login-account.html"><i class="far fa-user"></i>${localStorage.getItem(
+    var acc = document.getElementById("nav-link");
+    acc.innerHTML = `<i class="far fa-user"></i>${localStorage.getItem(
       "name"
-    )}</a>`;
+    )}`;
   }
 });
 
@@ -65,4 +67,13 @@ function userLoggedin() {
     return true;
   }
   return false;
+}
+
+function login() {
+  if (userLoggedin) {
+    localStorage.clear();
+    window.location.reload();
+  } else {
+    window.location.href = "http://127.0.0.1:5500/login-account.html";
+  }
 }
