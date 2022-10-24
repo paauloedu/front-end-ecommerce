@@ -28,7 +28,6 @@ $(".register").on("submit", function (e) {
   e.preventDefault();
   const address = convertFormToJSON(Array.from($(".address input")));
   const person = convertFormToJSON(Array.from($(".person input")));
-  person.role = "cliente";
   person.address = address;
   addUser(person);
   console.log(person);

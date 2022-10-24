@@ -1,25 +1,21 @@
-const url = "https://api-eng-soft-2.herokuapp.com/v1/users";
-const token =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM2NzQzNjdmLTgxMDYtNGVkMy05YmVjLWVkY2Q3MjY4YmViMyIsImlhdCI6MTY2NjM1NDg0NCwiZXhwIjoxNjY2Nzg2ODQ0fQ.rKYDsw08Llk-jElkqe9mKARVKJ8GLKSH51qLGuane8g";
+const userRoute = "https://api-eng-soft-2.herokuapp.com/v1/users";
 
-function getUser() {
-  axios
-    .get(`${url}`, {
+function getUser(id, token) {
+  return axios
+    .get(`${userRoute}/${id}`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
     })
-    .then((response) => {
-      const data = response.data;
-      teste.textContent = JSON.stringify(data);
-      console.log(response);
+    .then((response) => {      
+      return response.data;
     })
     .catch((error) => console.log(error));
 }
 
 function addUser(json) {
   axios
-    .post(`${url}/signup`, json)
+    .post(`${userRoute}/signup-client`, json)
     .then((response) => {
       alert("Usuário cadastrado.");
       window.location.href = "http://127.0.0.1:5500/login-account.html";
@@ -37,9 +33,12 @@ function addUser(json) {
 
 function loginUser(json) {
   axios
-    .post(`${url}/login`, json)
+    .post(`${userRoute}/login`, json)
     .then((response) => {
       alert("Usuário logado! Redirecionando para Home...");
+      localStorage.setItem("token", `${response.data.token}`);
+      localStorage.setItem("id", `${response.data.id}`);
+      localStorage.setItem("name", `${response.data.first_name}`);
       window.location.href = "http://127.0.0.1:5500/home-page.html";
     })
     .catch((error) => {
@@ -50,7 +49,7 @@ function loginUser(json) {
 
 function forgetUser(json) {
   axios
-    .post(`${url}/forget`, json)
+    .post(`${userRoute}/forget`, json)
     .then((response) => {
       alert("Email encaminhado para: " + json.email);
       window.location.href = "http://127.0.0.1:5500/login-account.html";
@@ -60,7 +59,7 @@ function forgetUser(json) {
 
 function newPasswordUser(json) {
   axios
-    .post(`${url}/reset`, json)
+    .post(`${userRoute}/reset`, json)
     .then((response) => {
       alert("Senha alterada com sucesso.");
       window.location.href = "http://127.0.0.1:5500/login-account.html";

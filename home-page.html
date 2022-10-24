@@ -9,15 +9,21 @@
 	<link rel="stylesheet" href="assets/css/style.css">
 	<link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon" />
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poppins" />
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+	<script src="https://unpkg.com/axios@0.27.2/dist/axios.min.js"></script> <!-- SOLUÇÃO TEMPORÁRIA -->
+	<script src="assets/script/productController.js"></script>
+	<script src="assets/script/categoryController.js"></script>
+	<script src="assets/script/userController.js"></script>
+	<script src="https://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.js"></script>
 	<script src="assets/script/typeahead.js"></script>
 </head>
 <body>
 	<div id="principal">
 		<header id="header">
-			<div id="nav-bar" class="inside">			
+			<div id="nav-bar" class="inside">
 				<div class="logomarca">
 					<a href="home-page.html"><img id="header-img" src="assets\img\Logo.png"></img></a>
-				</div>				
+				</div>
 				<div id="search-wrap">
 					<form role="search" class= "search-from" method="get">
 						<input type="text" class="typeahead search-field" placeholder="Procure por um item" value="" name=""> <!-- TODO: Ajeitar o CSS para barra de pesquisa -->                        
@@ -26,7 +32,7 @@
 					</form>
 				</div>                            
 				<li>                       
-					<a class="nav-link" href="login-account.html"><i class="far fa-user"></i>Minha Conta</a>
+					<a id="nav-link" class="nav-link" href="login-account.html"><i class="far fa-user"></i>Minha Conta</a>
 				</li>
 				<li>
 					<a><i class="fas fa-shopping-cart"></i></a>
@@ -35,9 +41,9 @@
 		</header>		
 		<div class="home-slider">
 			<div class="sliders">
-				<input type="radio" name="radio-btn"	id="slider-btn1">
-				<input type="radio" name="radio-btn"	id="slider-btn2">
-				<input type="radio" name="radio-btn"	id="slider-btn3">
+				<input type="radio" name="radio-btn" id="slider-btn1">
+				<input type="radio" name="radio-btn" id="slider-btn2">
+				<input type="radio" name="radio-btn" id="slider-btn3">
 				<div class="slide first">
 					<img src="\assets\img\Flash Sale - Banner.png" alt="Compre agora">
 				</div>

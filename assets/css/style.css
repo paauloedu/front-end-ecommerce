@@ -252,7 +252,7 @@ i.fas.fa-shopping-cart {
   width: 1280px;
   margin: 60px auto 0;
 }
-.category-images .inside ul{
+.category-images ul {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -261,31 +261,39 @@ i.fas.fa-shopping-cart {
   margin: 0;
   padding: 0;
 }
-.category-images .inside img {
-  display:inline-block;
-  position:relative;
-  margin-bottom: 40px;    
-  max-height:390px;
+.category-images img {
+  display: inline-block;
+  position: relative;
   width: 100%;
 }
-.category-images .inside li:nth-child(3) img, 
-.category-images .inside li:nth-child(4) img  {
-  max-height:280px;
-}
-.category-images .inside li{
+.category-images li {
   position: relative;
   list-style-type: none;
   text-align: center;
+  overflow: hidden;
+  margin-bottom: 40px;
 }
-.category-images .inside li:nth-child(1),
-.category-images .inside li:nth-child(4){   
+.category-images li:nth-child(1),
+.category-images li:nth-child(2),
+.category-images li:nth-child(1) img,
+.category-images li:nth-child(2) img {
+  max-height: 390px;
+}
+.category-images li:nth-child(3),
+.category-images li:nth-child(4),
+.category-images li:nth-child(3) img,
+.category-images li:nth-child(4) img  {
+  max-height: 280px;
+}
+.category-images li:nth-child(1),
+.category-images li:nth-child(4) {
   width: 34%;
 }
-.category-images .inside li:nth-child(2),
-.category-images .inside li:nth-child(3){   
+.category-images li:nth-child(2),
+.category-images li:nth-child(3) {
   width: 64%;
 }
-.category-images .inside p{
+.category-images p {
   position: absolute;
   font-size: 35px;
   font-weight: bold;
@@ -294,40 +302,64 @@ i.fas.fa-shopping-cart {
   left: 20px;
   text-align: center;
   line-height: 40px;
+  opacity: 0.8;
+  cursor: pointer;
 }
-.category-images .inside .btn-buy{
+.category-images p:hover {
+  opacity: 1;
+  transition: 0.5s;
+}
+.category-images .btn-buy {
   position: absolute;
   bottom: 32%;
   width: 130px;
   height: 40px;
   left: 20px;
-  color:white;
+  color: white;
   background: #f87f3b;
-  border:none;
+  border: none;
   cursor: pointer;
   font-size: 16px;
+  opacity: 0.8;
 }
-.category-images .inside .btn-buy:hover{
-  background:white;
+.category-images .btn-buy:hover {
+  background: white;
   color: #f87f3b;
-  border: 1px  solid #f87f3b;
+  border: 1px solid #f87f3b;
+  transition: 0.5s;
+  opacity: 1;
+}
+.category-images img:hover {
+  -webkit-filter: blur(5px);
+  -webkit-transform: scale(1.1);
+  filter: blur(3px);
+  transform: scale(1.1);
+}
+.category-images img {
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.category-images img:hover ~ p,
+.category-images img:hover ~ .btn-buy {
+  opacity: 1;
+  transition: all 0.5s;
 }
 /*TODO: Revisar isso aqui*/
-.category-images li:nth-child(1) .btn-buy{
+.category-images li:nth-child(1) .btn-buy {
   left: 34%;
 }
 .category-images li:nth-child(1) p {
   left: 24%;
   color: #f87f3b;
 }
-.category-images li:nth-child(2) .btn-buy{
+.category-images li:nth-child(2) .btn-buy {
   left: 40%;
 }
 .category-images li:nth-child(2) p {
   left: 34%;
   color: #f87f3b;
 }
-.category-images li:nth-child(3) .btn-buy{
+.category-images li:nth-child(3) .btn-buy {
   left: 43%;
 }
 .category-images li:nth-child(3) p {
@@ -335,7 +367,7 @@ i.fas.fa-shopping-cart {
   color: white;
   bottom: 50%;
 }
-.category-images li:nth-child(4) .btn-buy{
+.category-images li:nth-child(4) .btn-buy {
   left: 38%;
 }
 .category-images li:nth-child(4) p {
@@ -484,7 +516,8 @@ small.info,
   padding-top: 18px;
   font-size: 18px;
 }
-button#submit, #update {
+button#submit,
+#update {
   color: #f87f3b;
   font-family: "poppins", Helvetica;
   font-size: 25px;
@@ -501,7 +534,8 @@ input#password {
   font-size: 20px;
   font-family: "poppins", Helvetica;
 }
-button#submit:hover, #update:hover {
+button#submit:hover,
+#update:hover {
   color: white;
   background-color: #f87f3b;
   border: 1px solid black;
@@ -607,7 +641,8 @@ button#submit:hover, #update:hover {
 .input::placeholder {
   opacity: 0;
 }
-.item-form button#submit, .item-form button#update {
+.item-form button#submit,
+.item-form button#update {
   padding: 0;
 }
 #number {
@@ -761,7 +796,7 @@ input#id:disabled + .input-label {
   padding: 0 5px;
   background: #fff;
 }
-#nm-product{
+#nm-product {
   border: 1px solid #7f858d;
 }
 /*FIM_CADASTRO_PROD*/

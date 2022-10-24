@@ -33,19 +33,36 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// TODO: Colocar um SE apenas na home page
+var home = window.location.pathname == "/home-page.html";
+if (home) {
+  let count = 1;
+  document.getElementById("slider-btn1").checked = true;
 
-let count = 1;
-document.getElementById("slider-btn1").checked = true;
+  setInterval(function () {
+    nextImage();
+  }, 2000);
 
-setInterval(function () {
-  nextImage();
-}, 2000);
-
-function nextImage() {
-  count++;
-  if (count > 4) {
-    count = 1;
+  function nextImage() {
+    count++;
+    if (count > 4) {
+      count = 1;
+    }
+    document.getElementById("slider-btn" + count).checked = true;
   }
-  document.getElementById("slider-btn" + count).checked = true;
+}
+// TODO: Mudar nome da variavel token provisória
+$(document).ready(function nameAccount() {
+  if (userLoggedin()) {
+    let acc = document.getElementById("nav-link");
+    acc.innerHTML = `<a id="nav-link" class="nav-link" href="login-account.html"><i class="far fa-user"></i>${localStorage.getItem(
+      "name"
+    )}</a>`;
+  }
+});
+
+function userLoggedin() {
+  if (localStorage.getItem("token")) {
+    return true;
+  }
+  return false;
 }

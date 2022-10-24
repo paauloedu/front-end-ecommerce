@@ -1,6 +1,6 @@
 const url = "https://api-eng-soft-2.herokuapp.com/v1/products";
 const token =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM2NzQzNjdmLTgxMDYtNGVkMy05YmVjLWVkY2Q3MjY4YmViMyIsImlhdCI6MTY2NjM1NDg0NCwiZXhwIjoxNjY2Nzg2ODQ0fQ.rKYDsw08Llk-jElkqe9mKARVKJ8GLKSH51qLGuane8g";
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImUwODBkODk2LWEzNzUtNGU2OS05ZWNjLWYzNDE2YTdkYzdjNSIsImlhdCI6MTY2NjYxNDc4NCwiZXhwIjoxNjY3MDQ2Nzg0fQ.913gf5_sMFsegY24SCIxynevkUpD4-8sGdUlc11RcbU";
 
 function addProduct(json) {
   axios
@@ -11,10 +11,10 @@ function addProduct(json) {
     })
     .then((response) => {
       alert(`Produto: ${response.data.name} cadastrado com sucesso.`);
-      var allInputs = document.querySelectorAll("input");
-      allInputs.forEach((element) => {
-        element.value = "";
-      });
+      // var allInputs = document.querySelectorAll("input");
+      // allInputs.forEach((element) => {
+      //   element.value = "";
+      // });
     })
     .catch((error) => {
       alert("Não foi possível cadastrar o produto.\nTente novamente.");
