@@ -54,7 +54,10 @@ function forgetUser(json) {
       alert("Email encaminhado para: " + json.email);
       window.location.href = "http://127.0.0.1:5500/login-account.html";
     })
-    .catch((error) => console.log(error));
+    .catch((error) => {
+      alert("Email informado não consta no Banco de dados.");
+      console.log(error);
+    });
 }
 
 function newPasswordUser(json) {

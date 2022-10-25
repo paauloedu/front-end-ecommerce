@@ -304,6 +304,7 @@ i.fas.fa-shopping-cart {
   line-height: 40px;
   opacity: 0.8;
   cursor: pointer;
+  text-shadow: 4px 3px black;
 }
 .category-images p:hover {
   opacity: 1;
@@ -350,21 +351,18 @@ i.fas.fa-shopping-cart {
 }
 .category-images li:nth-child(1) p {
   left: 24%;
-  color: #f87f3b;
 }
 .category-images li:nth-child(2) .btn-buy {
   left: 40%;
 }
 .category-images li:nth-child(2) p {
   left: 34%;
-  color: #f87f3b;
 }
 .category-images li:nth-child(3) .btn-buy {
   left: 43%;
 }
 .category-images li:nth-child(3) p {
   left: 28%;
-  color: white;
   bottom: 50%;
 }
 .category-images li:nth-child(4) .btn-buy {
@@ -372,7 +370,6 @@ i.fas.fa-shopping-cart {
 }
 .category-images li:nth-child(4) p {
   left: 24%;
-  color: white;
   bottom: 50%;
 }
 /*FIM PRODUTOS*/

@@ -11,10 +11,6 @@ function addProduct(json) {
     })
     .then((response) => {
       alert(`Produto: ${response.data.name} cadastrado com sucesso.`);
-      // var allInputs = document.querySelectorAll("input");
-      // allInputs.forEach((element) => {
-      //   element.value = "";
-      // });
     })
     .catch((error) => {
       alert("Não foi possível cadastrar o produto.\nTente novamente.");
