@@ -17,6 +17,8 @@ function formataStringData(data) {
   return ano + "-" + ("0" + mes).slice(-2) + "-" + ("0" + dia).slice(-2);
 }
 
+const token = localStorage.getItem("token")
+
 $(".login").on("submit", function (e) {
   e.preventDefault();
   const login = convertFormToJSON(Array.from($(".login input")));
@@ -55,7 +57,7 @@ $("#cr-product").on("submit", async (e) => {
   newProduct.category_id = await getCategory(
     select.options[select.selectedIndex].value
   );
-  addProduct(newProduct);
+  addProduct(newProduct, token);
   console.log(newProduct);
 });
 
@@ -65,10 +67,10 @@ $("#mn-product button").click(async function (e) {
     const changeProduct = convertFormToJSON(Array.from($("#mn-product input")));
     changeProduct.description = document.getElementById("description").value;
     // Posso mudar e colocar uma variavel global no contexto do typeahead pegando o objeto selecionado e ir sempre salvando, depois disso, chamava aqui
-    updateProduct(changeProduct, document.getElementById("id").value); 
+    updateProduct(changeProduct, document.getElementById("id").value, token); 
     console.log(changeProduct);
   }
   if ($(this).attr("id") == "delete") {
-    deleteProduct(document.getElementById("id").value);
+    deleteProduct(document.getElementById("id").value, token);
   }
 });

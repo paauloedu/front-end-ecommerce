@@ -1,5 +1,5 @@
 $(document).ready(async function () {
-  var products = await getProducts();
+  var products = await getProducts(localStorage.getItem("token"));
   console.log(products);
 
   function getSugestions(query, callBack) {

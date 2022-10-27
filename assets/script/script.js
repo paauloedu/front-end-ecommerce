@@ -53,14 +53,16 @@ if (home) {
   }
 }
 // TODO: Mudar nome da variavel token provisória
-$(document).ready(function nameAccount() {
-  if (userLoggedin()) {
-    var acc = document.getElementById("nav-link");
-    acc.innerHTML = `<i class="far fa-user"></i>${localStorage.getItem(
-      "name"
-    )}`;
-  }
-});
+$(document).ready(
+  setTimeout(function nameAccount() {
+    if (userLoggedin()) {
+      var acc = document.getElementById("nav-link");
+      acc.innerHTML = `<i class="far fa-user"></i>${localStorage.getItem(
+        "name"
+      )}`;
+    }
+  }, 100)
+);
 
 function userLoggedin() {
   if (localStorage.getItem("token")) {

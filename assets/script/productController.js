@@ -1,8 +1,6 @@
 const url = "https://api-eng-soft-2.herokuapp.com/v1/products";
-const token =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImUwODBkODk2LWEzNzUtNGU2OS05ZWNjLWYzNDE2YTdkYzdjNSIsImlhdCI6MTY2NjYxNDc4NCwiZXhwIjoxNjY3MDQ2Nzg0fQ.913gf5_sMFsegY24SCIxynevkUpD4-8sGdUlc11RcbU";
 
-function addProduct(json) {
+function addProduct(json, token) {
   axios
     .post(`${url}`, json, {
       headers: {
@@ -18,7 +16,7 @@ function addProduct(json) {
     });
 }
 
-function getNameProducts() {
+function getNameProducts(token) {
   /* TODO: Pegar TODOS os valores, em vez de setar um pgSize alto */
   return axios
     .get(`${url}?pageSize=3000`, {
@@ -48,7 +46,7 @@ function getNameProducts() {
     });
 }
 
-function getProducts() {
+function getProducts(token) {
   return axios
     .get(`${url}?pageSize=3000`, {
       headers: {
@@ -63,7 +61,7 @@ function getProducts() {
     });
 }
 
-function updateProduct(json, id) {
+function updateProduct(json, id, token) {
   axios
     .put(`${url}/${id}`, json, {
       headers: {
@@ -81,7 +79,7 @@ function updateProduct(json, id) {
     });
 }
 
-function deleteProduct(id) {
+function deleteProduct(id, token) {
   axios
     .delete(`${url}/${id}`, {
       headers: {
