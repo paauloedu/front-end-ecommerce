@@ -52,7 +52,7 @@ if (home) {
     if (btn) btn.checked = true;
   }
 }
-// TODO: Mudar nome da variavel token provisória
+
 $(document).ready(
   setTimeout(function nameAccount() {
     if (userLoggedin()) {
@@ -60,22 +60,33 @@ $(document).ready(
       acc.innerHTML = `<i class="far fa-user"></i>${localStorage.getItem(
         "name"
       )}`;
+      var dropdown = document.getElementById("dropdown");
+      if (isAdminOrManager()) {
+        dropdown.innerHTML = `<a href="http://127.0.0.1:5500/create-product.html">Adicionar Produtos</a>
+        <a href="http://127.0.0.1:5500/manage-product.html">Gerenciar Produtos</a>
+        <a onclick="userLogout()">Sair</a>`;
+      } else {
+        dropdown.innerHTML = `<a onclick="userLogout()">Sair</a>`;
+      }
     }
   }, 100)
 );
 
 function userLoggedin() {
-  if (localStorage.getItem("token")) {
-    return true;
-  }
-  return false;
+  if (localStorage.getItem("token")) return true;
 }
 
 function login() {
-  if (userLoggedin) {
-    localStorage.clear();
-    window.location.reload();
-  } else {
-    window.location.href = "http://127.0.0.1:5500/login-account.html";
-  }
+  if (userLoggedin()) return;
+  else window.location.href = "http://127.0.0.1:5500/login-account.html";
+}
+
+function userLogout() {
+  localStorage.clear();
+  window.location.reload();
+  window.location.href = "http://127.0.0.1:5500/home-page.html";
+}
+
+function isAdminOrManager() {
+  if (localStorage.getItem("role") != "cliente") return true;
 }

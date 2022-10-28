@@ -39,6 +39,7 @@ function loginUser(json) {
       localStorage.setItem("token", `${response.data.token}`);
       localStorage.setItem("id", `${response.data.id}`);
       localStorage.setItem("name", `${response.data.first_name}`);
+      localStorage.setItem("role", `${response.data.role}`);
       window.location.href = "http://127.0.0.1:5500/home-page.html";
     })
     .catch((error) => {

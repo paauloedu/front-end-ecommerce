@@ -36,6 +36,7 @@ a.nav-link {
   font-size: 20px;
   font-weight: bold;
   text-decoration: none;
+  cursor: pointer;
 }
 a.nav-link:hover {
   color: #e78200;
@@ -67,6 +68,30 @@ li:hover i.far {
 }
 i.fas.fa-shopping-cart:hover {
   color: #e78200;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: black;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(255, 255, 255, 0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  color: #f87f3b;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+}
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+.navigation:hover .dropdown-content {
+  display: block;
+}
+.navigation:hover .dropbtn {  
+  background-color: #3e8e41;
 }
 /*Icon pesquisa*/
 i.fa.fa-search {
@@ -282,7 +307,7 @@ i.fas.fa-shopping-cart {
 .category-images li:nth-child(3),
 .category-images li:nth-child(4),
 .category-images li:nth-child(3) img,
-.category-images li:nth-child(4) img  {
+.category-images li:nth-child(4) img {
   max-height: 280px;
 }
 .category-images li:nth-child(1),
