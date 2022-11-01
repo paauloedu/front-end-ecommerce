@@ -90,7 +90,7 @@ i.fas.fa-shopping-cart:hover {
 .navigation:hover .dropdown-content {
   display: block;
 }
-.navigation:hover .dropbtn {  
+.navigation:hover .dropbtn {
   background-color: #3e8e41;
 }
 /*Icon pesquisa*/
@@ -267,12 +267,6 @@ i.fas.fa-shopping-cart {
   margin-top: auto;
 }
 /*PRODUTOS*/
-.product-content {
-  height: 400px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
 .category-images .inside {
   width: 1280px;
   margin: 60px auto 0;
@@ -822,6 +816,238 @@ input#id:disabled + .input-label {
   border: 1px solid #7f858d;
 }
 /*FIM_CADASTRO_PROD*/
+/*TELAS DO BI*/
+.show {
+  margin-top: 112px;
+}
+.show .form-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+/**/
+/*CARRINHO*/
+i {
+  cursor: pointer;
+}
+.cart {
+  position: relative;
+  color: #212529;
+  font-size: 30px;
+  padding: 5px;
+  border-radius: 4px;
+}
+.cartAmount {
+  position: absolute;
+  top: -15px;
+  right: -10px;
+  font-size: 16px;
+  background-color: #f87f3b;
+  color: white;
+  padding: 3px;
+  border-radius: 3px;
+}
+.shop {
+  display: grid;
+  grid-template-columns: repeat(4, 223px);
+  gap: 30px;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.item {
+  border-radius: 4px;
+}
+.item img {
+  width: 100%;
+  border-radius: 2px 2px 0 0;
+}
+.details {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  padding-left: 25px;
+  gap: 35px;
+  align-items: center;
+  min-width: 600px;
+  justify-content: space-around;
+}
+.price-quantity {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 8px;
+  font-size: 16px;
+}
+.bi-dash-lg {
+  color: red;
+}
+.bi-plus-lg {
+  color: green;
+}
+.bi-x-lg {
+  color: red;
+  font-weight: bold;
+}
+.shopping-cart {
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+  align-items: left;
+}
+.cart-item {
+  border-radius: 5px;
+  display: flex;
+}
+.title-price-x {
+  min-width: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.title-price {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.cart-item-price {
+  background-color: #f87f3b;
+  color: white;
+  border-radius: 4px;
+  padding: 3px 6px;
+  white-space: nowrap;
+}
+.products-cart,
+.resume-cart {
+  border: 1px solid rgb(127, 133, 141);
+  border-radius: 5px;
+  display: inline-block;
+  text-align: center;
+  padding: 20px;
+}
+.products-cart {
+  width: 58%;
+}
+.resume-cart {
+  width: 38%;
+  max-height: 398px;
+}
+.products-cart .form-title,
+.resume-cart .form-title {
+  margin-bottom: 20px;
+  text-align: left;
+  text-transform: none;
+  color: #000;
+}
+#go-home {
+  width: 100%;
+  color: white;
+  background-color: #f87f3b;
+  font-family: "poppins", Helvetica;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid black;
+}
+.removeAll {
+  margin-top: 2px;
+  max-height: 30px;
+  color: white;
+  background-color: red;
+  font-family: "poppins", Helvetica;
+  font-size: 15px;
+  width: inherit;
+  padding: 5px;
+  border-radius: 6px;
+  border: 1px solid black;
+}
+.resume-cart .buying,
+.resume-cart .go-payment {
+  width: 100%;
+  color: #f87f3b;
+  font-family: "poppins", Helvetica;
+  font-size: 20px;
+  text-transform: uppercase;
+  padding: 10px;
+  background-color: transparent;
+  border-radius: 2px;
+  border: 1px solid #f87f3b;
+}
+.resume-cart .go-payment:hover {
+  transition: all 0.5s;
+  background-color: #ed6e27;
+}
+.resume-cart .go-payment {
+  color: white;
+  background-color: #f87f3b;
+}
+.resume-cart .flex:nth-child(2),
+.resume-cart .flex:nth-child(3),
+hr,
+.resume-cart .flex:nth-child(5),
+.resume-cart .go-payment {
+  margin-bottom: 20px;
+}
+.title-price p:nth-child(1) {
+  text-align: left;
+  max-width: 30ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/*FIM_CARRINHO*/
+/*HOME*/
+.home-details {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 10px;
+}
+.home-details h3 {
+  text-align: left;
+  max-width: 30ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.home-details p {
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.home-details .go-payment {
+  width: 100%;
+  color: white;
+  font-family: "poppins", Helvetica;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 10px;
+  background-color: #f87f3b;
+  border-radius: 2px;
+  border: 1px solid black;
+}
+.home-details .go-payment:hover {
+  transition: all 0.5s;
+  background-color: #ed6e27;
+}
+section.sale {
+  margin-top: 132px;
+  margin-bottom: 50px;
+}
+.product-content {
+  text-align: center;
+}
+.product-content .form-title {
+  margin-bottom: 30px;
+}
+/**/
 @media only screen and (min-width: 1024px) and (max-width: 1129px) {
 }
 

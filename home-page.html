@@ -16,6 +16,7 @@
 	<script src="assets/script/userController.js"></script>
 	<script src="https://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.js"></script>
 	<script src="assets/script/typeahead.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 </head>
 <body>
 	<div id="principal">
@@ -26,7 +27,7 @@
 				</div>
 				<div id="search-wrap">
 					<form role="search" class= "search-from" method="get">
-						<input type="text" class="typeahead search-field" placeholder="Procure por um item" value="" name=""> <!-- TODO: Ajeitar o CSS para barra de pesquisa -->                        
+						<input type="text" class="typeahead search-field" placeholder="Procure por um item" value="" name="">                         
 						<i class="fa fa-search" aria-hidden="true"></i>
 						<input type="submit" class="search-submit" value="">
 					</form>
@@ -36,7 +37,12 @@
 					<div id="dropdown" class="dropdown-content"></div>
 				</li>					
 				<li>
-					<a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+					<a href="cart.html">
+						<div class="cart">
+							<i class="fas fa-shopping-cart"></i>
+							<div id="cartAmount" class="cartAmount">0</div>
+						</div>
+					</a>
 				</li>	
 			</div>     
 		</header>		
@@ -104,30 +110,32 @@
 		<main>
 			<div class="category-images">
 				<div class="inside">
-						<ul>
-							<li>
-								<img src="assets/img/banner-4.png">
-								<p>Os melhores<br>Hardwares</p>
-								<input type="submit" value="Compre já!" class="btn-buy"></li>
-							<li>
-								<img src="assets/img/banner-2.png">
-								<p>Celulares e<br>Smartphones</p>
-								<input type="submit" value="Compre já!" class="btn-buy"></li>
-							<li>
-								<img src="assets/img/banner-3.png">
-								<p>Os melhores<br>Notebooks do Mercado</p>
-								<input type="submit" value="Compre já!" class="btn-buy"></li>
-							<li>
-								<img src="assets/img/banner-1.png">
-								<p>Periféricos<br>para seu setup</p>
-								<input type="submit" value="Compre já!" class="btn-buy"></li>
-							
-						</ul>
+					<ul>
+						<li>
+							<img src="assets/img/banner-4.png">
+							<p>Os melhores<br>Hardwares</p>
+							<input type="submit" value="Compre já!" class="btn-buy"></li>
+						<li>
+							<img src="assets/img/banner-2.png">
+							<p>Celulares e<br>Smartphones</p>
+							<input type="submit" value="Compre já!" class="btn-buy"></li>
+						<li>
+							<img src="assets/img/banner-3.png">
+							<p>Os melhores<br>Notebooks do Mercado</p>
+							<input type="submit" value="Compre já!" class="btn-buy"></li>
+						<li>
+							<img src="assets/img/banner-1.png">
+							<p>Periféricos<br>para seu setup</p>
+							<input type="submit" value="Compre já!" class="btn-buy"></li>
+						
+					</ul>
 				</div>
 			</div>
-			<section class="product-content">
-				<h1>PRODUTOS</h1>
-			</section>
+			<div class="product-content inside">
+				<h1 class="form-title">Produtos em Destaque</h1>
+				<div class="shop" id="shop"></div>
+			</div>
+
 		</main>
 		<footer><iframe src="https://www.google.com/maps/d/u/1/embed?mid=1-iwAEx_csY4vO6u-H1oGQiaz2kKSHAo&ehbc=2E312F" width="100%" height="380"></iframe>
 			<div id="footer">
@@ -211,4 +219,6 @@
 		</footer>
 	</div>
 </body>
+<script src="assets/script/products-data.js"></script>
+<script src="assets/script/cart-main.js"></script>
 </html>

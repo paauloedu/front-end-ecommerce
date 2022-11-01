@@ -8,11 +8,11 @@
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script>
         $(function(){ 
-            $("#header").load("home-page.html #header");
             $("#footer").load("home-page.html #footer");
             $(".footer-under").load("home-page.html .footer-under");
         });        
     </script>
+    <script src="assets/script/script.js"></script>
 	<script src="https://kit.fontawesome.com/9404c90217.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="assets/css/style.css">
 	<link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon" />
@@ -22,19 +22,54 @@
 	<script src="assets/script/categoryController.js"></script>
 	<script src="assets/script/userController.js"></script>
 	<script src="https://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 	<script src="assets/script/typeahead.js"></script>
 </head>
 <body>
     <div id="principal">
-		<header id="header"></header>        
-        
-        <div id="label" class="text-center"></div>
-        <div class="shopping-cart" id="shopping-cart"></div>
-
+		<header id="header">
+			<div id="nav-bar" class="inside">
+				<div class="logomarca">
+					<a href="home-page.html"><img id="header-img" src="assets\img\Logo.png"></img></a>
+				</div>
+				<div id="search-wrap">
+					<form role="search" class= "search-from" method="get">
+						<input type="text" class="typeahead search-field" placeholder="Procure por um item" value="" name="">                         
+						<i class="fa fa-search" aria-hidden="true"></i>
+						<input type="submit" class="search-submit" value="">
+					</form>
+				</div>                            
+				<li class="navigation">                       
+					<a id="nav-link" class="nav-link" onclick="login()"><i class="far fa-user"></i>Minha Conta</a>
+					<div id="dropdown" class="dropdown-content"></div>
+				</li>					
+				<li>
+					<a href="cart.html">
+						<div class="cart">
+							<i class="fas fa-shopping-cart"></i>
+							<div id="cartAmount" class="cartAmount">0</div>
+						</div>
+					</a>
+				</li>	
+			</div>     
+		</header>  
+        <section class="sale">
+            <div class="inside flex">
+                <div class="products-cart">
+                  <h2 class="form-title">Produtos e Frete</h2>
+                  <div class="shopping-cart" id="shopping-cart"></div>
+                </div>
+                <div class="resume-cart">
+                  <div id="label"></div>
+                </div>
+            </div>
+        </section>
         <footer>
 			<div id="footer"></div>
             <div class="footer-under"></div>
         </footer>
     </div>
 </body>
+<script src="assets/script/products-data.js"></script>
+<script src="assets/script/cart.js"></script>
 </html>

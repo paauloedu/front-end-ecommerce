@@ -64,6 +64,8 @@ $(document).ready(
       if (isAdminOrManager()) {
         dropdown.innerHTML = `<a href="http://127.0.0.1:5500/create-product.html">Adicionar Produtos</a>
         <a href="http://127.0.0.1:5500/manage-product.html">Gerenciar Produtos</a>
+        <a href="http://127.0.0.1:5500/sales-report.html">Relatório de Vendas</a>
+        <a href="http://127.0.0.1:5500/manage-inventory.html">Relatório de Estoque</a>
         <a onclick="userLogout()">Sair</a>`;
       } else {
         dropdown.innerHTML = `<a onclick="userLogout()">Sair</a>`;

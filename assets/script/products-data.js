@@ -1,0 +1,58 @@
+let shopItemsData = [
+  {
+    id: "product1",
+    name: "PlayStation 2",
+    price: 5300.00,
+    desc: "Ultra raro e ultra caro. Uma relíquia",
+    img: "assets/img/ps2.png",
+  },
+  {
+    id: "product2",
+    name: "RTX 3090 TI",
+    price: 7900.00,
+    desc: "Placa de video ótima para Minecraft e Roblox",
+    img: "assets/img/RTX1990TI.jpg",
+  },
+  {
+    id: "product3",
+    name: "Apple Watch Ultra",
+    price: 10299.00,
+    desc: "Resistente à água (100 metros) nota de rodapé. Para burguês",
+    img: "assets/img/applew.jfif",
+  },
+  {
+    id: "product4",
+    name: "Processador AMD Ryzen 5 5600X",
+    price: 2300.00,
+    desc: "Processador AMD Ryzen 5 5600X, 3.7GHz (4.6GHz Max Turbo), Cache 35MB, 6 Núcleos, 12 Threads",
+    img: "assets/img/ryzen.jpg",
+  },
+  {
+    id: "product5",
+    name: "Headset Gamer Fallen Morcego",
+    price: 399.00,
+    desc: "Headset Gamer Fallen Morcego, Surround Virtual 7.1, Cancelamento de Ruído, Drivers 53mm",
+    img: "assets/img/fallen.png",
+  },
+  {
+    id: "product6",
+    name: "Lenovo IdeaPad Gaming 3i",
+    price: 3900.00,
+    desc: "Notebook Gamer Lenovo IdeaPad Gaming 3i Intel Core i5-10300H, GeForce GTX 1650, 8GB RAM, SSD 256GB",
+    img: "assets/img/lenovo.jpg",
+  },
+  {
+    id: "product7",
+    name: "Smart TV Samsung 55 QN55Q60BAGXZD",
+    price: 3250.00,
+    desc: "Smart TV Samsung 55 Polegadas QLED 4K, HDR, Wi-Fi, Bluetooth, HDMI, USB, Alexa",
+    img: "assets/img/samg.jpg",
+  },
+  {
+    id: "product8",
+    name: "GeForce RTX 3060",
+    price: 2400.00,
+    desc: "Placa de Video Gigabyte GeForce RTX 3060 Gaming OC 12G, 12 GB GDDR6, LHR, Ray Tracing",
+    img: "assets/img/3060XC.jpg",
+  },
+];
